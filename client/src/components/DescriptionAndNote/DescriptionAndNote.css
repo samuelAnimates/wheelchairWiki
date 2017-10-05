@@ -1,9 +1,16 @@
+.bg-white{
+    background-color: white;
+}
 .border-style-solid{
     border-style: solid;
 }
-.border-width-2px{
-    border-width: 2px;
+.border-width-1px{
+    border-width: 1px;
 }
+.clear-both{
+    clear: both;
+}
+
 .display-block{
     display: block;
 }
