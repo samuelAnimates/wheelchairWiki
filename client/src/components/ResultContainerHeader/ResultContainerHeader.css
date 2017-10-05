@@ -1,0 +1,61 @@
+.bg-90-79-120{
+	background-color: rgb(90, 79, 120);
+}
+.bg-246-246-249{
+    background-color: rgb(246, 246, 249);
+}
+.border-radius-p25-1p4-p75em{
+    border-radius: .25em 1.4em .75em;
+}
+
+.border-top-right-rad-1p25em{
+    border-top-right-radius: 1.25em;
+}
+
+.border-style-solid{
+    border-style: solid;
+}
+.border-width-2px{
+    border-width: 2px;
+}
+.color-white{
+	color: white;
+}
+.font-exo{
+    font-family: 'Exo', sans-serif;
+}
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+.font-size-2p5em{
+    font-size: 2.5em;
+}
+.font-weight-400{
+    font-weight: 400;
+}
+.padding-bottom-1em{
+    padding-bottom: 1em;
+}
+.padding-left-1p75em{
+    padding-left: 1.75em;
+}
+.padding-right-1p75em{
+    padding-right: 1.75em;
+}
+.padding-top-1em{
+    padding-top: 1em;
+}
+.width-100{
+	width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.width-100pc{
+    width: 100%;
+}
