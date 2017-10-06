@@ -1,6 +1,9 @@
 .bg-white{
     background-color: white;
 }
+.clear-both{
+    clear: both;
+}
 .float-left{
     float: left;
 }
