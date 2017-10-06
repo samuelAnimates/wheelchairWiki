@@ -9,6 +9,8 @@ const ResultContainerBody = props => (
             {props.site.entrance.rating===1 &&
                 <IconAndNote
                     title="Entrance"
+                    label="Accessible"
+                    alt="'Accessible' Icon"
                     logoPath="../assets/icons/accessible.svg"
                     notes={props.site.entrance.notes}
                 />
@@ -16,6 +18,8 @@ const ResultContainerBody = props => (
             {props.site.entrance.rating===0 &&
                 <IconAndNote
                     title="Entrance"
+                    label="Not Accessible"
+                    alt="'Not Accessible' Icon"
                     logoPath="../assets/icons/not-accessible.svg"
                     notes={props.site.entrance.notes}
                 />
@@ -25,6 +29,8 @@ const ResultContainerBody = props => (
             {props.site.bathroom.rating===1 &&
                 <IconAndNote
                     title="Bathroom"
+                    label="Accessible"
+                    alt="'Accessible' Icon"
                     logoPath="../assets/icons/accessible.svg"
                     notes={props.site.bathroom.notes}
                 />
@@ -32,6 +38,8 @@ const ResultContainerBody = props => (
             {props.site.bathroom.rating===0 &&
                 <IconAndNote
                     title="Bathroom"
+                    label="Not Accessible"
+                    alt="'Not Accessible' Icon"
                     logoPath="../assets/icons/not-accessible.svg"
                     notes={props.site.bathroom.notes}
                 />

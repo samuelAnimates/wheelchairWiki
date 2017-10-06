@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import ResultContainer from "./components/ResultContainer";
+import ResultsSection from "./components/ResultsSection";
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <ResultContainer/>
+      <ResultsSection/>
     );
   }
 }
