@@ -10,6 +10,7 @@ const ResultContainerBody = props => (
                 <IconAndNote
                     title="Entrance"
                     label="Accessible"
+                    labelColor={props.labelColor}
                     alt="'Accessible' Icon"
                     logoPath="../assets/icons/accessible.svg"
                     notes={props.site.entrance.notes}
@@ -19,6 +20,7 @@ const ResultContainerBody = props => (
                 <IconAndNote
                     title="Entrance"
                     label="Not Accessible"
+                    labelColor={props.labelColor}
                     alt="'Not Accessible' Icon"
                     logoPath="../assets/icons/not-accessible.svg"
                     notes={props.site.entrance.notes}
@@ -30,6 +32,7 @@ const ResultContainerBody = props => (
                 <IconAndNote
                     title="Bathroom"
                     label="Accessible"
+                    labelColor={props.labelColor}
                     alt="'Accessible' Icon"
                     logoPath="../assets/icons/accessible.svg"
                     notes={props.site.bathroom.notes}
@@ -39,6 +42,7 @@ const ResultContainerBody = props => (
                 <IconAndNote
                     title="Bathroom"
                     label="Not Accessible"
+                    labelColor={props.labelColor}
                     alt="'Not Accessible' Icon"
                     logoPath="../assets/icons/not-accessible.svg"
                     notes={props.site.bathroom.notes}

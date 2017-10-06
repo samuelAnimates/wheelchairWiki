@@ -1,8 +1,8 @@
-.bg-90-79-120{
-	background-color: rgb(90, 79, 120);
-}
 .bg-246-246-249{
     background-color: rgb(246, 246, 249);
+}
+.bg-249-255-249 {
+    background-color: rgb(249, 255, 249);
 }
 .border-radius-p25-1p4-p75em{
     border-radius: .25em 1.4em .75em;

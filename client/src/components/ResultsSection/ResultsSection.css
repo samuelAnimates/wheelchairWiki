@@ -1,8 +1,9 @@
-.bg-90-79-120{
-	background-color: rgb(90, 79, 120);
-}
+
 .bg-246-246-249{
     background-color: rgb(246, 246, 249);
+}
+.bg-249-255-249{
+    background-color: rgb(249,255,249);
 }
 .border-radius-p25-1p4-p75em{
     border-radius: .25em 1.4em .75em;
@@ -64,14 +65,20 @@
 .padding-bottom-1em{
     padding-bottom: 1em;
 }
+.padding-left-1em{
+    padding-left: 1em;
+}
+.padding-right-1em{
+    padding-right: 1em;
+}
 .padding-top-1em{
     padding-top: 1em;
 }
+.position-relative{
+    position: relative;
+}
 .width-85pc{
 	width: 85%;
-}
-.width-100pc{
-	width: 100%;
 }
 .text-center{
     text-align: center;

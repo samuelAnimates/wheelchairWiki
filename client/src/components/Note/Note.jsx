@@ -1,9 +1,12 @@
 import React from "react";
 
 const Note = props => (
-    <div className="font-opensans font-weight-400">
-        <p className="font-size-p75em"><span className="font-size-1p25em font-weight-600">Notes: </span>{props.notes}</p>
-    </div>
+    <table className="font-opensans">
+        <tr>
+            <td className="font-size-1em font-weight-600">Notes</td>
+            <td className="font-size-p75em font-weight-400 padding-left-p25em">{props.notes}</td>
+        </tr>
+    </table>
 );
 
 export default Note;
