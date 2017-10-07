@@ -1,6 +1,7 @@
-.font-exo{
-    font-family: 'Exo', sans-serif;
+.display-block{
+    display: block;
 }
-.text-center{
-    text-align: center;   
+
+.margin-auto{
+    margin: auto;
 }

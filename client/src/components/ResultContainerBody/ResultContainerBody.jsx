@@ -16,6 +16,16 @@ const ResultContainerBody = props => (
                     notes={props.site.entrance.notes}
                 />
             }
+            {props.site.entrance.rating===0.5 &&
+                <IconAndNote
+                    title="Entrance"
+                    label="Semi Accessible"
+                    labelColor={props.labelColor}
+                    alt="'Semi Accessible' Icon"
+                    logoPath="../assets/icons/semi-accessible.svg"
+                    notes={props.site.entrance.notes}
+                />
+            }
             {props.site.entrance.rating===0 &&
                 <IconAndNote
                     title="Entrance"
@@ -35,6 +45,16 @@ const ResultContainerBody = props => (
                     labelColor={props.labelColor}
                     alt="'Accessible' Icon"
                     logoPath="../assets/icons/accessible.svg"
+                    notes={props.site.bathroom.notes}
+                />
+            }
+            {props.site.bathroom.rating===0.5 &&
+                <IconAndNote
+                    title="Bathroom"
+                    label="Semi Accessible"
+                    labelColor={props.labelColor}
+                    alt="'Semi Accessible' Icon"
+                    logoPath="../assets/icons/semi-accessible.svg"
                     notes={props.site.bathroom.notes}
                 />
             }
