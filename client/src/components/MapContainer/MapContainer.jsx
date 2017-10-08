@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
-import { Map, TileLayer } from 'react-leaflet';
+import L from 'leaflet';
+import { Map, TileLayer, Marker } from 'react-leaflet';
 import "./MapContainer.css";
 import Control from 'react-leaflet-control';
 
-const stamenTonerTiles = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
-const stamenTonerAttr = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
-const zoomLevel = 12;
+const stamenTonerTiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const stamenTonerAttr = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+const zoomLevel = 13;
+
+const mapIcon = new L.Icon();
+mapIcon.options.iconUrl= "../assets/icons/map-icon.png",
+mapIcon.options.iconAnchor= new L.Point(22, 49),
+mapIcon.options.size= new L.Point(50, 50),
+//shadowUrl: 'my-icon-shadow.png',
+// shadowSize: [68, 95],
+mapIcon.shadowAnchor= [22, 94]
+
 
 export default class MapContainer extends Component {
     
@@ -34,6 +44,10 @@ export default class MapContainer extends Component {
                     <TileLayer
                         attribution={stamenTonerAttr}
                         url={stamenTonerTiles}
+                    />
+                    <Marker
+                        position = {[this.props.mapCenter.long, this.props.mapCenter.lat]}
+                        icon = {mapIcon}
                     />
                     <Control position="topleft" >
                         <button 
