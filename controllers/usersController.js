@@ -2,14 +2,14 @@
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
-const db = require("../models");
+const User = require("../models/User.js");
 
 
 module.exports = {
     //register a new user
     register : function(req, res){
         //create new user with input from site. requires username and password
-        var newUser = new db.User(req.body);
+        var newUser = new User(req.body);
         newUser.hash_password = bcrypt.hashSync(req.body.password, 10);
         newUser.save(function(err, user) {
           if (err) {
@@ -25,7 +25,7 @@ module.exports = {
 
     signIn : function(req, res){
         //check that the user exists
-        db.User.findOne({
+        User.findOne({
             username: req.body.username
         }, function(err, user) {
             if (err) throw err;
