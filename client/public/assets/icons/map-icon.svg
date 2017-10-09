@@ -10,12 +10,15 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="50"
-   height="50"
-   viewBox="0 0 13.229167 13.229167"
+   height="75"
+   viewBox="0 0 13.229167 19.84375"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="map-icon.svg">
+   sodipodi:docname="map-icon.svg"
+   inkscape:export-filename="C:\Users\Owner\code\wheelchairWiki\client\public\assets\icons\map-icon.png"
+   inkscape:export-xdpi="75"
+   inkscape:export-ydpi="75">
   <defs
      id="defs2">
     <filter
@@ -91,9 +94,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="7.9422777"
-     inkscape:cy="34.720676"
+     inkscape:zoom="7.919596"
+     inkscape:cx="25.799421"
+     inkscape:cy="31.149247"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -119,10 +122,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-283.77082)">
+     transform="translate(0,-277.15624)">
     <g
        id="g4505"
-       transform="matrix(0.02421401,0,0,0.01947293,-7.7168955,282.64087)"
+       transform="matrix(0.01919902,0,0,0.01562715,10.806681,279.65316)"
        style="display:inline;fill:#fafafa;fill-opacity:1;stroke:#121212;stroke-width:21.5448246;stroke-linecap:round;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill">
       <path
          id="path4499"
@@ -140,5 +143,12 @@
          inkscape:connector-curvature="0"
          style="fill:#fafafa;fill-opacity:1;stroke:#121212;stroke-width:21.5448246;stroke-linecap:round;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
     </g>
+    <path
+       style="opacity:1;vector-effect:none;fill:#5a4f78;fill-opacity:1;stroke:#121212;stroke-width:1.13385832;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 25.379491,1.5084501 C 14.425389,1.4501277 1.1211216,8.361949 1.515625,23.609082 1.9101284,38.856215 24.8125,74.747452 24.8125,74.747452 c 0,0 23.534781,-31.947851 23.928288,-51.13837 C 49.134295,4.4185637 36.333593,1.5667726 25.379491,1.5084501 Z"
+       transform="matrix(0.26458333,0,0,0.26458333,0,277.15624)"
+       id="path4506"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzczz" />
   </g>
 </svg>

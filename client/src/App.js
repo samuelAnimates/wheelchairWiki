@@ -37,7 +37,8 @@ class App extends Component {
                             bathroom: {rating: 0, notes: "The food stall doesn't have a restroom, and there isn't an accessible bathroom nearby."},
                             description: "A popular street food spot near Banana Farm Market that specializes in bánh xèo (savory pancakes).",
                             notes: "You might have to move some chairs around to make room at a table", 
-                            links: [{title: "Muui video review", url:"https://youtu.be/u-NnHVTIc-k"}]
+                            links: [{title: "Muui video review", url:"https://youtu.be/u-NnHVTIc-k"}],
+                            coordinates: {lat: 10.7754405, long: 106.6824551}
                         },
                         {
                             name: "Nam Giao (Quán Nam Giao)",
@@ -45,7 +46,8 @@ class App extends Component {
                             bathroom: {rating: 0, notes: ""},
                             description: "A restaurant in District 1 that serves Vietnamese Hue food.",
                             notes: "You might have to move some chairs around to make room at a table", 
-                            links: [{title: "Muui video review", url:"https://youtu.be/lsFo7futqok"}]
+                            links: [{title: "Muui video review", url:"https://youtu.be/lsFo7futqok"}],
+                            coordinates: {lat: 10.7737275, long: 106.6984438}
                         }
                 ],
             bathrooms: []
@@ -60,6 +62,8 @@ class App extends Component {
         />
         <MapContainer
           mapCenter={this.state.city.coordinates}
+          sites={this.state.city.sites}
+          restaurants={this.state.city.restaurants}
         />
         <ResultsSection
           sites={this.state.city.sites}
