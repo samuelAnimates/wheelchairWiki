@@ -4,15 +4,16 @@ const Schema = mongoose.Schema;
 const AccesibilityInfoSchema = new Schema({
     city: {
         type: Schema.Types.ObjectId,
-        ref: "City"
+        ref: "City",
+        index: true
     },
     sites: {
         type: Schema.Types.ObjectId,
-        ref: "Sites"
+        ref: "Locations"
     },
     restaurants: {
         type: Schema.Types.ObjectId,
-        ref: "Restaurants"
+        ref: "Locations"
     },
     bathrooms: {
         type: Schema.Types.ObjectId,

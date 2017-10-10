@@ -19,5 +19,5 @@ const bathroomSchema = new Schema({
     }
 });
 
-const Bathrooms = mongoose.model("Bathroom", bathroomSchema);
+const Bathrooms = mongoose.model("Bathrooms", bathroomSchema);
 module.exports = Bathrooms;

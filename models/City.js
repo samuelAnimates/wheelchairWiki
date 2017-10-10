@@ -17,10 +17,6 @@ const citySchema = new Schema({
     },
     longitude: {
         type: Number
-    },
-    info: {
-        type: Schema.Types.ObjectId,
-        ref: "AccessibilityInfo"
     }
 });
 

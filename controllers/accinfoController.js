@@ -17,16 +17,18 @@ module.exports = {
                 restaurants: values[2]._id,
                 bathrooms: values[3]._id
             }).then(infoModel => {
-                // res.json(infoModel)
-                db.City
-                .findOneAndUpdate({ _id: values[0]._id }, {info: infoModel._id}, {new: true})
-                .then(dbModel => res.json(dbModel))
+                res.json(infoModel)
             })
         }).catch(function(err){
             res.status(422).json(err)
         })
     },
 
+    findByCity : function(req, res){
+        db.AccessibilityInfo.findOne({"city": mongoose.Types.ObjectId(req.params.id)})
+        .populate("city sites restaurants bathrooms")
+        .exec((error, result) => res.json(result))
+    },
 
     test : function(req, res){
         res.json("test")

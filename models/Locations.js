@@ -8,7 +8,7 @@ function categoryValidation (val) {
     return true;
 }
 
-const locationSchema = new Schema({
+const locationsSchema = new Schema({
     name: {
         type: String,
         trim: true,
@@ -60,5 +60,5 @@ const locationSchema = new Schema({
     }
 });
 
-const Location = mongoose.model("Location", locationSchema);
-module.exports = Location;
+const Locations = mongoose.model("Locations", locationsSchema);
+module.exports = Locations;

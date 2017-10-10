@@ -9,7 +9,7 @@ router.route("/info")
   })
   .post(accinfoController.createInfo);
 
-// router.route("/info")
-//  .post();
+router.route("/info/:id")
+ .get(accinfoController.findByCity);
 
 module.exports = router;
