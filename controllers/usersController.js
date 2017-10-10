@@ -1,7 +1,7 @@
 // https://www.codementor.io/olatundegaruba/5-steps-to-authenticating-node-js-with-jwt-7ahb5dmyr
-var mongoose = require('mongoose');
-var jwt = require('jsonwebtoken');
-var bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 const User = require("../models/User.js");
 
 
@@ -50,7 +50,6 @@ module.exports = {
     },
 
     test : function(req, res){
-        //check that the user exists
-        res.json("test")
+        res.json(req.body)
     }
 }

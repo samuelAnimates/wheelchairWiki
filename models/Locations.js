@@ -8,11 +8,11 @@ function categoryValidation (val) {
     return true;
 }
 
-const siteSchema = new Schema({
+const locationSchema = new Schema({
     name: {
         type: String,
         trim: true,
-        required: "Site name is Required"
+        required: "Location name is Required"
     },
     description: {
         type: String,
@@ -60,5 +60,5 @@ const siteSchema = new Schema({
     }
 });
 
-const Site = mongoose.model("Site", siteSchema);
-module.exports = Site;
+const Location = mongoose.model("Location", locationSchema);
+module.exports = Location;

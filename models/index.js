@@ -1,7 +1,7 @@
 module.exports = {
     User: require("./User"),
     City: require("./City"),
-    Sites: require("./Sites"),
-    Restaurants: require("./Restaurants"),
-    Bathrooms: require("./Bathrooms")
+    Locations: require("./Locations"),
+    Bathrooms: require("./Bathrooms"),
+    AccessibilityInfo: require("./AccessibilityInfo")
 };
