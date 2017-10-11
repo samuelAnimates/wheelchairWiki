@@ -10,6 +10,7 @@ router.route("/city")
   .post(cityController.createCity);
 
 router.route("/city/:id")
- .get(cityController.findById);
+ .get(cityController.findById)
+ .post(cityController.addPlace);
 
 module.exports = router;
