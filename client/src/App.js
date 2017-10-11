@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import CityHeading from "./components/CityHeading";
+import Legend from "./components/Legend";
 import ResultsSection from "./components/ResultsSection";
 import MapContainer from "./components/MapContainer";
 import './App.css';
@@ -50,25 +51,48 @@ class App extends Component {
                             coordinates: {lat: 10.7737275, long: 106.6984438}
                         }
                 ],
-            bathrooms: []
+            bathrooms: [
+                        {
+                            name: "Bitexco Tower ground floor bathroom",
+                            notes: "Located in the shoppin center on the ground floor of the tower",
+                            links: [],
+                            coordinates: {lat: 10.7715939, long: 106.7044839}
+                        },
+                        {
+                            name: "Tao Dan Park public bathroom",
+                            notes: "Near the gate on Truong Dinh street. You may have to ask a staff person to unlock it.",
+                            links: [],
+                            coordinates: {lat: 10.7745951, long: 106.6932052}
+                        },
+            ]
         }
     }
 
   render() {
     return (
       <div>
-        <CityHeading
-          cityName={this.state.city.name}
-        />
-        <MapContainer
-          mapCenter={this.state.city.coordinates}
-          sites={this.state.city.sites}
-          restaurants={this.state.city.restaurants}
-        />
-        <ResultsSection
-          sites={this.state.city.sites}
-          restaurants={this.state.city.restaurants}
-        />
+          <CityHeading
+            cityName={this.state.city.name}
+          />
+        <div className="float-left width-20pc">
+          <CityHeading
+            cityName={this.state.city.name}
+          />
+        </div>
+        <main className="float-left width-80pc">
+            <MapContainer
+              mapCenter={this.state.city.coordinates}
+              sites={this.state.city.sites}
+              restaurants={this.state.city.restaurants}
+              bathrooms={this.state.city.bathrooms}
+            />
+            <Legend/>
+            <ResultsSection
+              sites={this.state.city.sites}
+              restaurants={this.state.city.restaurants}
+              bathrooms={this.state.city.bathrooms}
+            />
+        </main>
       </div>
     );
   }

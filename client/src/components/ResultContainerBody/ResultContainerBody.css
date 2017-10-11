@@ -22,7 +22,9 @@
 .box-shadow{
     box-shadow: .1em .1em .5em #aaaaaa;
 }
-
+.clear-both{
+    clear: both;
+}
 .color-white{
 	color: white;
 }
@@ -67,11 +69,11 @@
 .padding-top-1em{
     padding-top: 1em;
 }
-.width-85pc{
-	width: 85%;
+.position-absolute{
+    position: absolute;
 }
-.width-100pc{
-	width: 100%;
+.position-relative{
+    position: relative;
 }
 .text-center{
     text-align: center;
@@ -83,6 +85,14 @@
 
 .width-50pc{
     width: 50%;
+}
+
+.width-40pc{
+    width: 40%;
+}
+
+.width-60pc{
+    width: 60pc;
 }
 
 .width-100pc{

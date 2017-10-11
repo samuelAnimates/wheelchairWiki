@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import "./MapContainer.css";
+import BathroomIcon from "../BathroomIcon"
 import RestaurantIcon from "../RestaurantIcon"
 import SiteIcon from "../SiteIcon"
 
@@ -29,21 +30,48 @@ class MapContainer extends Component{
                     {
                         this.props.sites.map(result =>{
                             console.log([result.coordinates.lat, result.coordinates.long]);
-                            return (<Marker
-                                icon={SiteIcon}
-                                position={[result.coordinates.lat, result.coordinates.long]}
-                            />)
+                            return (
+                                <Marker
+                                    icon={SiteIcon}
+                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                >
+                                    <Popup>
+                                        <span>{result.name}</span>
+                                    </Popup>
+                                </Marker>
+                            )
                         })
                     }
                     {
                         this.props.restaurants.map(result =>{
                             console.log([result.coordinates.lat, result.coordinates.long]);
-                            return (<Marker
-                                icon={RestaurantIcon}
-                                position={[result.coordinates.lat, result.coordinates.long]}
-                            />)
+                            return (
+                                <Marker
+                                    icon={RestaurantIcon}
+                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                >
+                                    <Popup>
+                                        <span>{result.name}</span>
+                                    </Popup>
+                                </Marker>
+                            )
                         })
-                    }   
+                    }
+                    {
+                        this.props.bathrooms.map(result =>{
+                            console.log([result.coordinates.lat, result.coordinates.long]);
+                            return (
+                                <Marker
+                                    icon={BathroomIcon}
+                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                >
+                                    <Popup>
+                                        <span>{result.name}</span>
+                                    </Popup>
+                                </Marker>
+                            )
+                        })
+                    }     
                 </Map> 
             </div>
         )

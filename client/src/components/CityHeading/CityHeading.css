@@ -1,6 +1,12 @@
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
+.font-size-3em{
+    font-size: 3em;
+}
+.font-weight-600{
+    font-weight: 600;
+}
 .text-center{
     text-align: center;   
 }
