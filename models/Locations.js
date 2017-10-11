@@ -44,14 +44,18 @@ const locationsSchema = new Schema({
         type: String,
         trim: true
     },
-    linkTitle: {
-        type: String,
-        trim: true
-    },
-    linkVideo: {
-        type: String,
-        trim: true
-    },
+    links: [
+        {
+            url: {
+                type: String,
+                trim: true
+            },
+            title: {
+                type: String,
+                trim: true
+            }
+        }
+    ],
     latitude: {
         type: Number
     },

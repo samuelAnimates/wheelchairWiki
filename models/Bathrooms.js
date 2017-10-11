@@ -16,7 +16,19 @@ const bathroomSchema = new Schema({
     },
     longitude: {
         type: Number
-    }
+    },
+    links: [
+        {
+            url: {
+                type: String,
+                trim: true
+            },
+            title: {
+                type: String,
+                trim: true
+            }
+        }
+    ],
 });
 
 const Bathrooms = mongoose.model("Bathrooms", bathroomSchema);
