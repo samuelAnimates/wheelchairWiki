@@ -7,18 +7,18 @@ const AccesibilityInfoSchema = new Schema({
         ref: "City",
         index: true
     },
-    sites: {
+    sites: [{
         type: Schema.Types.ObjectId,
         ref: "Locations"
-    },
-    restaurants: {
+    }],
+    restaurants: [{
         type: Schema.Types.ObjectId,
         ref: "Locations"
-    },
-    bathrooms: {
+    }],
+    bathrooms: [{
         type: Schema.Types.ObjectId,
         ref: "Bathrooms"
-    }
+    }]
 });
 
 const AccesibilityInfo = mongoose.model("AccesibilityInfo", AccesibilityInfoSchema);

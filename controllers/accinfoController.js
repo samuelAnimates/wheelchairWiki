@@ -30,6 +30,22 @@ module.exports = {
         .exec((error, result) => res.json(result))
     },
 
+    updateCity : function(req, res){
+        res.json("test")
+    },
+
+    updateSite : function(req, res){
+        res.json("test")
+    },
+
+    updateRestaurant : function(req, res){
+        res.json("test")
+    },
+
+    updateBathroom : function(req, res){
+        res.json("test")
+    },
+
     test : function(req, res){
         res.json("test")
     }
