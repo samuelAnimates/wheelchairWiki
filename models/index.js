@@ -3,5 +3,4 @@ module.exports = {
     City: require("./City"),
     Locations: require("./Locations"),
     Bathrooms: require("./Bathrooms"),
-    AccessibilityInfo: require("./AccessibilityInfo")
 };

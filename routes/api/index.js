@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const accinfoController = require("../../controllers/accinfoController");
+const cityController = require("../../controllers/cityController");
 
 // TODO: write routes based on the controller functions that are necessary
-//TODO: write route with city as parameter to retrieve info for that city
-router.route("/info")
+//TODO: write route with city name as parameter to retrieve info for that city
+router.route("/city")
   .get(function(req, res){
     res.json("testing 123")
   })
-  .post(accinfoController.createInfo);
+  .post(cityController.createCity);
 
-router.route("/info/:id")
- .get(accinfoController.findByCity);
+router.route("/city/:id")
+ .get(cityController.findById);
 
 module.exports = router;

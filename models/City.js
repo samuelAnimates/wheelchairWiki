@@ -17,7 +17,19 @@ const citySchema = new Schema({
     },
     longitude: {
         type: Number
-    }
+    },
+    sites: [{
+        type: Schema.Types.ObjectId,
+        ref: "Locations"
+    }],
+    restaurants: [{
+        type: Schema.Types.ObjectId,
+        ref: "Locations"
+    }],
+    bathrooms: [{
+        type: Schema.Types.ObjectId,
+        ref: "Bathrooms"
+    }]
 });
 
 const City = mongoose.model("City", citySchema);
