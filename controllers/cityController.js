@@ -34,7 +34,7 @@ module.exports = {
     },
 
     updateCity : function(req, res){
-        //req should contain: the information to be set in the city.
+        //req should contain: id in params, the information to be changed in the city.
         //e.g.
         // {
         //     "name": "Ho Chi Minh",
@@ -46,9 +46,9 @@ module.exports = {
     },
 
     deleteCity : function(req, res){
-        //TODO: write this function
-        db.City.findByIdAndRemove(req.params.id, req.body, {new: true})
-        .select('name country latitude longitude')
-        .exec((error, result) => res.json(result))
+        // req should contain: id in params, and nothing else
+        //TODO: delete the attached places as well
+        db.City.findByIdAndRemove(req.params.id)
+        .then(result => res.json(result))
     }
 }

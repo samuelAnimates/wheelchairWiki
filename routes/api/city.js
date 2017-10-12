@@ -7,6 +7,7 @@ router.route("/")
 
 router.route("/id/:id")
  .get(cityController.findCityById)
- .post(cityController.updateCity);
+ .post(cityController.updateCity)
+ .delete(cityController.deleteCity);
 
 module.exports = router;
