@@ -2,8 +2,9 @@ import React from "react";
 import "./CityHeading.css";
 
 const CityHeading = props => (
-    <div className="font-exo font-weight-600 font-size-3em text-center">
-        <h1>{props.cityName}</h1>
+    <div className="font-exo text-center">
+        <h1 className="font-weight-600 font-size-3em">{props.cityName}</h1>
+        <span>{props.countryName}</span>
     </div>
 );
 

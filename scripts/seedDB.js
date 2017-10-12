@@ -426,11 +426,11 @@ db.City
 .remove({})
 .then(() =>
     db.City.create({
-    name:"Ho Chi Minh",
+    name:"Ho Chi Minh City",
     country: "Vietnam",
     latitude: 106.660172,
     longitude: 10.762622,
-    transportation: `The city buses are not accessible, so wheelchair users will have to rely on taxis to get around. It may be difficult to coordinate for a taxi van, which is a barrier for power wheelchair users and in cases where transferring from a chair to a car is difficult. There are Vietnamese-language apps for hailing taxis from VinaSun and Mai Linh. Uber also operates in Vietnam as an option for people who can't read Vietnamese. Keep in mind that the traffic is notoriously bad and there are few traffic lights in the city, so use caution if you're visiting for the first time.`,
+    transportation: `The vast majority of city buses are not accessible, so wheelchair users will have to rely on taxis to get around. It may be difficult to coordinate for a taxi van, which is a barrier for power wheelchair users and in cases where transferring from a chair to a car is difficult. There are Vietnamese-language apps for hailing taxis from VinaSun and Mai Linh. Uber also operates in Vietnam as an option for people who can't read Vietnamese. Keep in mind that the traffic is notoriously bad and there are few traffic lights in the city, so use caution if you're visiting for the first time.`,
     terrain: `Because the sidewalks of Ho Chi Minh City are often crowded with people and motorbikes, pedestrians often walk in the road as well. Wheelchair users may find this easier than navigating around motobikes and inconsistent curb cuts. Note that there aren't many traffic lights in the city, so caution should be used when traveling on the road.`,
     links: [{
         url: "https://wikitravel.org/en/Ho_Chi_Minh_City",

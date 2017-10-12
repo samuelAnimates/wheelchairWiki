@@ -7,20 +7,20 @@ import SiteIcon from "../SiteIcon"
 
 const stamenTonerTiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const stamenTonerAttr = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
-const zoomLevel = 13;
+const zoomLevel = 11;
 
 
 class MapContainer extends Component{
     constructor(props) {
         super(props);
-        this.state = {sites: props.sites, restaurants: props.restaurants};
+        this.state = {sites: this.props.sites, restaurants: this.props.restaurants};
     }
 
     render() {
         return (
             <div className="display-block margin-auto">
                 <Map
-                    center={[10.772939, 106.69839]}
+                    center={this.props.mapCenter}
                     zoom={zoomLevel}
                 >
                     <TileLayer
@@ -29,11 +29,10 @@ class MapContainer extends Component{
                     />
                     {
                         this.props.sites.map(result =>{
-                            console.log([result.coordinates.lat, result.coordinates.long]);
                             return (
                                 <Marker
                                     icon={SiteIcon}
-                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                    position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
                                         <span>{result.name}</span>
@@ -44,11 +43,10 @@ class MapContainer extends Component{
                     }
                     {
                         this.props.restaurants.map(result =>{
-                            console.log([result.coordinates.lat, result.coordinates.long]);
                             return (
                                 <Marker
                                     icon={RestaurantIcon}
-                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                    position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
                                         <span>{result.name}</span>
@@ -59,11 +57,10 @@ class MapContainer extends Component{
                     }
                     {
                         this.props.bathrooms.map(result =>{
-                            console.log([result.coordinates.lat, result.coordinates.long]);
                             return (
                                 <Marker
                                     icon={BathroomIcon}
-                                    position={[result.coordinates.lat, result.coordinates.long]}
+                                    position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
                                         <span>{result.name}</span>

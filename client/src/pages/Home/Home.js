@@ -1,85 +1,50 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import CityHeading from "../../components/CityHeading";
-import Legend from "../../components/Legend";
-import ResultsSection from "../../components/ResultsSection";
+import CityInfo from "../../components/CityInfo";
 import MapContainer from "../../components/MapContainer";
+import API from "../../utils/API.js";
 import './Home.css';
 
 class Home extends Component {
-  
-  // Setting our component's initial state
+
   state = {
-        city: {
-            name: "Ho Chi Minh City",
-            coordinates: {lat: 106.62965, long: 10.82302 },
-            sites: [{
-                        name: "Ben Thanh Market (Chợ Bến Thành)",
-                        entrance: {rating: 1, notes: "The main entrance on Le Loi street has a large threshold, so other entrances may be easier for wheelchair users."},
-                        bathroom: {rating: 1, notes: "The wheelchair accessible bathrooms are located near door #8"},
-                        description: "A large market filled with souvenirs, clothes, restaurant stalls, and groceries.",
-                        notes: "The market is navigable for wheelchair users, but some aisles may be too narrow or too crowded. Additionally, some shops near the entrances are on raised platforms and thus are not accessible.", 
-                        links: [{title: "Muui video review", url:"https://youtu.be/LIggt7h4e04"}],
-                        coordinates: {lat: 10.772939, long: 106.69839}
-                    },
-                    {
-                      name: "Saigon Central Post Office (Bưu Điện trung tâm Sài Gòn)",
-                      entrance: {rating: 0, notes: "The entrance is at the top of a small set of stairs"},
-                      bathroom: {rating: 0, notes: ""},
-                      description: "The main post office of Saigon.",
-                      notes: "", 
-                      links: [{title: "Muui video review", url:"https://youtu.be/2UiqRslHu_c"}],
-                      coordinates: {lat: 10.7798294, long: 106.699882}
-                    }
-                ],
-            restaurants: [{
-                            name: "Banh Xeo 335 (Bánh Xèo 335)",
-                            entrance: {rating: 1, notes: "All of the restaurant's seating is outdoors at street level."},
-                            bathroom: {rating: 0, notes: "The food stall doesn't have a restroom, and there isn't an accessible bathroom nearby."},
-                            description: "A popular street food spot near Banana Farm Market that specializes in bánh xèo (savory pancakes).",
-                            notes: "You might have to move some chairs around to make room at a table", 
-                            links: [{title: "Muui video review", url:"https://youtu.be/u-NnHVTIc-k"}],
-                            coordinates: {lat: 10.7754405, long: 106.6824551}
-                        },
-                        {
-                            name: "Nam Giao (Quán Nam Giao)",
-                            entrance: {rating: 0.5, notes: "The entrance is not accessible, but there is outdoor seating at street level that is accessible."},
-                            bathroom: {rating: 0, notes: ""},
-                            description: "A restaurant in District 1 that serves Vietnamese Hue food.",
-                            notes: "You might have to move some chairs around to make room at a table", 
-                            links: [{title: "Muui video review", url:"https://youtu.be/lsFo7futqok"}],
-                            coordinates: {lat: 10.7737275, long: 106.6984438}
-                        }
-                ],
-            bathrooms: [
-                        {
-                            name: "Bitexco Tower ground floor bathroom",
-                            notes: "Located in the shoppin center on the ground floor of the tower",
-                            links: [],
-                            coordinates: {lat: 10.7715939, long: 106.7044839}
-                        },
-                        {
-                            name: "Tao Dan Park public bathroom",
-                            notes: "Near the gate on Truong Dinh street. You may have to ask a staff person to unlock it.",
-                            links: [],
-                            coordinates: {lat: 10.7745951, long: 106.6932052}
-                        },
-            ]
-        }
-    }
+    cities: [{"_id":"59dece6bbfc7ef2dcc71e691","name":"Ho Chi Minh City","country":"Vietnam","latitude":106.660172,"longitude":10.762622}]
+  }
+
+  componentDidMount(){
+    this.getAllCities();
+  }
+
+  getAllCities = () => {
+    API.getAllCities()
+    .then(res =>{
+      this.setState({ cities: res.data});
+    })
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
       <div>
           <CityHeading
-            cityName={this.state.city.name}
+            cityName="Wheelchair Travel Wiki"
           />
         <div className="float-left width-20pc">
-          <CityHeading
-            cityName={this.state.city.name}
+          <CityInfo
           />
         </div>
         <div>
-            SEARCH BAR
+            {this.state.cities.map(city=>{
+              return (
+                <div>
+                  <h2>
+                    <Link to={"/viewCity/" + city._id}>{city.name}</Link>
+                  </h2>
+                  <span>{city.country}</span>
+                </div>
+              )
+            })}
         </div>
       </div>
     );

@@ -20,6 +20,13 @@ module.exports = {
         })
     },
 
+    findAll : function(req, res){
+        //req should contain: id in params, and nothing else
+        db.City.find({})
+        .select('name country latitude longitude')
+        .exec((error, result) => res.json(result))
+    },
+
     findById : function(req, res){
         //req should contain: id in params, and nothing else
         db.City.findOne({"_id": mongoose.Types.ObjectId(req.params.id)})

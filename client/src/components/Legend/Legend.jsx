@@ -5,7 +5,7 @@ const Legend = props =>(
         <table className="display-block margin-auto text-center">
             <thead>
                 <tr>
-                    <td className="text-center" colspan="2">Legend</td>
+                    <td className="text-center" colSpan="3">Legend</td>
                 </tr>
             </thead>
             <tbody>
