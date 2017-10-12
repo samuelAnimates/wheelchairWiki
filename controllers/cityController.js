@@ -28,7 +28,7 @@ module.exports = {
 
     findCityById : function(req, res){
         //req should contain: id in params, and nothing else
-        db.City.findOne({"_id": mongoose.Types.ObjectId(req.params.id)})
+        db.City.findById(req.params.id)
         .populate("sites restaurants bathrooms")
         .exec((error, result) => res.json(result))
     },
@@ -47,6 +47,8 @@ module.exports = {
 
     deleteCity : function(req, res){
         //TODO: write this function
-        res.json("test")
+        db.City.findByIdAndRemove(req.params.id, req.body, {new: true})
+        .select('name country latitude longitude')
+        .exec((error, result) => res.json(result))
     }
 }
