@@ -34,10 +34,19 @@ module.exports = {
     },
 
     updateCity : function(req, res){
-        res.json("test")
+        //req should contain: the information to be set in the city.
+        //e.g.
+        // {
+        //     "name": "Ho Chi Minh",
+        //     "country": "Vietnam"
+        // }
+        db.City.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        .select('name country latitude longitude')
+        .exec((error, result) => res.json(result))
     },
 
     deleteCity : function(req, res){
+        //TODO: write this function
         res.json("test")
     }
 }
