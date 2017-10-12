@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="75"
+   viewBox="0 0 13.229167 19.84375"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="site-icon.svg"
+   inkscape:export-filename="C:\Users\Owner\code\wheelchairWiki\client\public\assets\icons\site-icon.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120">
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5715">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5705" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5707" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.9"
+         result="blur"
+         id="feGaussianBlur5709" />
+      <feOffset
+         dx="-7.2"
+         dy="4.7"
+         result="offset"
+         id="feOffset5711" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite5713" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5717" />
+      <feFlood
+         id="feFlood5719"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5721"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur5723"
+         in="composite1"
+         stdDeviation="3.5"
+         result="blur" />
+      <feOffset
+         id="feOffset5725"
+         dx="-4.6"
+         dy="5.1"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite5727"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="-12.619167"
+     inkscape:cy="37.208904"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-277.15624)">
+    <path
+       style="opacity:1;vector-effect:none;fill:#5a4f78;fill-opacity:1;stroke:#121212;stroke-width:0.28880483;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 6.7805581,277.38997 c -2.8982728,-0.0143 -6.35187434,1.68051 -6.24749532,5.41918 0.10437903,3.73868 6.24749532,12.35386 6.24749532,12.35386 0,0 6.1767889,-8.5771 6.2474959,-12.35386 0.07071,-3.77675 -3.3492231,-5.40488 -6.2474959,-5.41918 z"
+       id="path4506"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzczz" />
+    <ellipse
+       style="opacity:1;vector-effect:none;fill:#5a4f78;fill-opacity:1;stroke:#121212;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path4507"
+       cx="6.7799487"
+       cy="295.74884"
+       rx="1.0523738"
+       ry="1.0857824" />
+    <ellipse
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#121212;stroke-width:0.29068977;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path4509"
+       cx="6.7799487"
+       cy="295.78229"
+       rx="0.62271589"
+       ry="0.62265509" />
+    <ellipse
+       style="opacity:1;vector-effect:none;fill:#f6f6f9;fill-opacity:1;stroke:#121212;stroke-width:0.40099999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path4509-4"
+       cx="6.7799487"
+       cy="283.48849"
+       rx="4.9741011"
+       ry="4.9741592" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.40099999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path6668"
+       sodipodi:sides="8"
+       sodipodi:cx="6.7799487"
+       sodipodi:cy="283.48849"
+       sodipodi:r1="1.7741911"
+       sodipodi:r2="4.9283085"
+       sodipodi:arg1="0.65692312"
+       sodipodi:arg2="1.0496222"
+       inkscape:flatsided="false"
+       inkscape:rounded="1.6410484e-015"
+       inkscape:randomized="0"
+       d="m 8.1848863,284.57196 1.0488609,3.19054 -2.2264857,-2.51444 -1.5143914,2.99771 0.2036098,-3.35234 -3.1905337,1.04886 2.5144335,-2.22648 -2.9977047,-1.51439 3.3523361,0.20361 -1.0488609,-3.19054 2.2264858,2.51444 1.5143913,-2.99771 -0.2036098,3.35234 3.1905335,-1.04886 -2.5144333,2.22648 2.9977043,1.51439 z" />
+  </g>
+</svg>

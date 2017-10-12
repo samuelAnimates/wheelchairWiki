@@ -4,9 +4,7 @@ const cityController = require("../../controllers/cityController");
 // TODO: write routes based on the controller functions that are necessary
 //TODO: write route with city name as parameter to retrieve info for that city
 router.route("/city")
-  .get(function(req, res){
-    res.json("testing 123")
-  })
+  .get(cityController.findAll)
   .post(cityController.createCity);
 
 router.route("/city/:id")
