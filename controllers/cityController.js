@@ -3,8 +3,9 @@ const db = require("../models");
 
 
 module.exports = {
-    //req should contain: an object containing the information for the city, under the "city" key
-    //e.g.:    {
+    createCity : function(req, res){
+        //req should contain: an object containing the information for the city, under the "city" key
+        //e.g.:    {
             //     "city": {
             //         "name": "Town",
             //         "country": "Country",
@@ -12,7 +13,6 @@ module.exports = {
             //         "longitude": 22
             //     }
             // }
-    createCity : function(req, res){
         db.City.create(req.body.city).then(cityModel => {
             res.json(cityModel)
         }).catch(function(err){
@@ -47,7 +47,6 @@ module.exports = {
 
     deleteCity : function(req, res){
         // req should contain: id in params, and nothing else
-        //TODO: delete the attached places as well
         db.City.findByIdAndRemove(req.params.id)
         .then(result => res.json(result))
     }
