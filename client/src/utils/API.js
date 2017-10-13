@@ -9,6 +9,9 @@ export default {
   getCity: function(id) {
     return axios.get("/api/city/" + id);
   },
+  signIn: function(userData) {
+    return axios.post("/auth/signin", userData);
+  },
   // Adds a place to a city
   addPlace: function() {
     return axios.post("/api/city/");
