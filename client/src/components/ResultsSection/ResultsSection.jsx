@@ -15,6 +15,7 @@ const ResultsSection = props => (
                             bgColor="bg-255-253-242"
                             headingBgColor="bg-255-248-196"
                             fontColor="color-black"
+                            key={result._id}
                         />
                     </div>
                 )}   
@@ -24,10 +25,12 @@ const ResultsSection = props => (
                 {props.sites.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
+                            displaySiteEditPopup={props.displaySiteEditPopup}
                             site={result}
                             bgColor="bg-246-246-249"
                             headingBgColor="bg-90-79-120"
                             fontColor="color-white"
+                            key={result._id}
                         />
                     </div>
                 )}   
@@ -37,10 +40,12 @@ const ResultsSection = props => (
                 {props.restaurants.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
+                            displaySiteEditPopup={props.displaySiteEditPopup}
                             site={result}
                             bgColor="bg-249-255-249"
                             headingBgColor="bg-0-92-0"
                             fontColor="color-white"
+                            key={result._id}
                         />
                     </div>
                 )} 

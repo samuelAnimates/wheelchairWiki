@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import CityHeading from "../../components/CityHeading";
 import CityInfo from "../../components/CityInfo";
+import HomepageMapContainer from "../../components/HomepageMapContainer"
 import MapContainer from "../../components/MapContainer";
 import API from "../../utils/API.js";
 import './Home.css';
@@ -35,6 +36,9 @@ class Home extends Component {
           />
         </div>
         <div>
+          <HomepageMapContainer
+            cities={this.state.cities}
+          />
             {this.state.cities.map(city=>{
               return (
                 <div>

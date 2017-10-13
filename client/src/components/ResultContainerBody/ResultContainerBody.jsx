@@ -1,5 +1,6 @@
 import React from "react";
 import IconAndNote from "../IconAndNote"
+import EditButton from "../EditButton"
 import DescriptionAndNote from "../DescriptionAndNote"
 
 const ResultContainerBody = props => (
@@ -80,6 +81,12 @@ const ResultContainerBody = props => (
             <DescriptionAndNote
                 description={props.site.description}
                 notes={props.site.notes}
+            />
+        </div>
+        <div className="text-center">
+            <EditButton
+                onClick={() => props.displaySiteEditPopup(props.site)}
+                site={props.site}
             />
         </div>
 

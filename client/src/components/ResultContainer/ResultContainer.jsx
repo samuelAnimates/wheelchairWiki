@@ -15,6 +15,7 @@ const ResultContainer = props => (
         </div>
         <div>
             <ResultContainerBody
+                displaySiteEditPopup={props.displaySiteEditPopup}
                 site= {props.site}
                 labelColor={props.headingBgColor}
             />
