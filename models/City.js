@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const Locations = require('./Locations.js');
+const Bathrooms = require('./Bathrooms.js');
 const Schema = mongoose.Schema;
 
 const citySchema = new Schema({
@@ -51,6 +53,18 @@ const citySchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Bathrooms"
     }]
+});
+
+//set up middleware to recursively delete all places associated with this city when the city is deleted
+citySchema.pre('remove', function(next) {
+    let promiseList = [];
+    let locations = this.restaurants.concat(this.sites);
+    let bathrooms = this.bathrooms;
+    promiseList.push(Locations.deleteMany({ _id: { $in: locations}}));
+    promiseList.push(Bathrooms.deleteMany({ _id: { $in: bathrooms}}));
+    Promise.all(promiseList).then(function(){
+        next()
+    })
 });
 
 const City = mongoose.model("City", citySchema);

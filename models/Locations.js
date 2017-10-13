@@ -9,6 +9,11 @@ function categoryValidation (val) {
 }
 
 const locationsSchema = new Schema({
+    type: {
+        type: String,
+        trim: true,
+        required: "Location type is Required"
+    },
     name: {
         type: String,
         trim: true,
