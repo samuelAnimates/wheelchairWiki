@@ -417,15 +417,25 @@ var seedBathrooms = [
     }
 ];
 
-
-
-
-
-
+//This seed starter will drop Ho Chi Minh City from the db (if it exists) and create it according to seed data provided above
 db.City
-.remove({})
-.then(() =>
-    db.City.create({
+.findOne({"name":"Ho Chi Minh City"})
+.then(result => {
+  // If the city was found, it will be removed before it is seeded.
+  // this separation of .remove, instead of using findOneAndRemove, is to make the middleware on the City model delete all the associated places. do not change it unless you have another way to delete those orphaned place documents.
+  if(result){
+    result.remove()
+    .then(() =>
+      createSeedCity()
+    );
+  } else{
+    createSeedCity();
+  }
+  
+});
+
+function createSeedCity() {
+  db.City.create({
     name:"Ho Chi Minh City",
     country: "Vietnam",
     latitude: 106.660172,
@@ -439,7 +449,9 @@ db.City
     }).then(cityModel => {
         var sitePromises = [];
         for(s in seedSites){
-            sitePromises.push(db.Locations.create(seedSites[s]))
+          let site = seedSites[s]
+          site.type = "site"
+            sitePromises.push(db.Locations.create(site))
         }
         Promise.all(sitePromises).then(values => {
             var ids = values.map(v => {return v._id});
@@ -450,7 +462,9 @@ db.City
 
         var restaurantPromises = [];
         for(r in seedRestaurants){
-            restaurantPromises.push(db.Locations.create(seedRestaurants[r]))
+          let restaurant = seedRestaurants[r]
+          restaurant.type = "restaurant"
+            restaurantPromises.push(db.Locations.create(restaurant))
         }
         Promise.all(restaurantPromises).then(values => {
             var ids = values.map(v => {return v._id});
@@ -470,4 +484,4 @@ db.City
             .catch((err) => console.log(err));
         })
     }).catch(err => console.log(err))
-);
+};
