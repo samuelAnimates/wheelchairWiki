@@ -3,8 +3,9 @@ const db = require("../models");
 
 
 module.exports = {
+    //TODO: convert this to a place type thing; needs to take in city id
     addPlace: function(req, res){
-        //req should contain: id of the city to add to in params, object containing all info needed to construct a place, and the type of place (sites, restaurants, bathrooms)
+        //req should contain: id of the city to add to, object containing all info needed to construct a place, and the type of place (sites, restaurants, bathrooms)
         let placeType = req.body.category
         if(placeType === "bathroom"){
             var model = db.Bathrooms;
@@ -36,6 +37,18 @@ module.exports = {
         .catch(function(err){
             res.status(422).json(err)
         })
+    },
+
+    findAll : function(req, res){
+        res.json("test")
+    },
+
+    findAllOfType : function(req, res){
+        res.json("test")
+    },
+
+    findById : function(req, res){
+        res.json("test")
     },
 
     updatePlace : function(req, res){
