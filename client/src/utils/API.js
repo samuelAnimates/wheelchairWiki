@@ -7,7 +7,7 @@ export default {
     return axios.get("/api/city/");
   },
   getCity: function(id) {
-    return axios.get("/api/city/" + id);
+    return axios.get("/api/city/id/" + id);
   },
   signIn: function(userData) {
     return axios.post("/auth/signin", userData);

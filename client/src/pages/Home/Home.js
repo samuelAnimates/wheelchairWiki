@@ -31,10 +31,6 @@ class Home extends Component {
           <CityHeading
             cityName="Wheelchair Travel Wiki"
           />
-        <div className="float-left width-20pc">
-          <CityInfo
-          />
-        </div>
         <div>
           <HomepageMapContainer
             cities={this.state.cities}

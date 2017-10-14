@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import IconAndNote from "../IconAndNote"
-import EditButton from "../EditButton"
-import DescriptionAndNote from "../DescriptionAndNote"
-import ModalSiteEdit from '../../components/ModalSiteEdit';
+import EditButton from "../EditButton";
+import DescriptionAndNote from "../DescriptionAndNote";
+import LinksPanel from "../LinksPanel";
+import ModalLocationEdit from '../ModalLocationEdit';
 
 class ResultContainerBody extends Component {
     state={
@@ -95,9 +96,17 @@ class ResultContainerBody extends Component {
                         notes={this.props.site.notes}
                     />
                 </div>
+
+                <div>
+                    <h2 className="font-exo font-weight-400 text-center">Links</h2>
+                    <LinksPanel
+                        links= {this.props.site.links}
+                    />
+                </div>
+
                 <div className="text-center">
                     <EditButton onClick={this.toggleModal}/>
-                    <ModalSiteEdit show={this.state.isOpen} onClose={this.toggleModal}
+                    <ModalLocationEdit show={this.state.isOpen} onClose={this.toggleModal}
                         site={this.props.site}
                     />
                 </div>

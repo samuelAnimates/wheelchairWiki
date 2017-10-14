@@ -47,6 +47,7 @@ class City extends Component {
           <CityInfo
             transportationInfo={this.state.city.transportation}
             terrainInfo={this.state.city.terrain}
+            links={this.state.city.links}
           />
         </div>
         <main className="float-left responsive-two-thirds-container">
