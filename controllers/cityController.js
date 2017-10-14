@@ -1,10 +1,16 @@
 var mongoose = require('mongoose');
 const db = require("../models");
 
+//https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript/196991
+function titleize(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
 
 module.exports = {
-    //req should contain: an object containing the information for the city, under the "city" key
-    //e.g.:    {
+    createCity : function(req, res){
+        //req should contain: an object containing the information for the city, under the "city" key
+        //e.g.:    {
             //     "city": {
             //         "name": "Town",
             //         "country": "Country",
@@ -12,7 +18,6 @@ module.exports = {
             //         "longitude": 22
             //     }
             // }
-    createCity : function(req, res){
         db.City.create(req.body.city).then(cityModel => {
             res.json(cityModel)
         }).catch(function(err){
@@ -21,22 +26,48 @@ module.exports = {
     },
 
     findAll : function(req, res){
-        //req should contain: id in params, and nothing else
+        //req does not need to contain anything
         db.City.find({})
         .select('name country latitude longitude')
         .exec((error, result) => res.json(result))
     },
 
-    findById : function(req, res){
+    findCityById : function(req, res){
         //req should contain: id in params, and nothing else
-        db.City.findOne({"_id": mongoose.Types.ObjectId(req.params.id)})
+        db.City.findById(req.params.id)
         .populate("sites restaurants bathrooms")
         .exec((error, result) => res.json(result))
     },
 
+    findCityByName : function(req, res){
+        //req should contain: city name in params (replace spaces with -), and nothing else
+        let cityName = titleize(req.params.name.replace(/\-/g, " "))
+        db.City.findOne({"name": cityName})
+        .select('name country latitude longitude')
+        .exec((error, result) => res.json(result))
+    },
+
+    updateCity : function(req, res){
+        //req should contain: id in params, the information to be changed in the city.
+        //e.g.
+        // {
+        //     "name": "Ho Chi Minh",
+        //     "country": "Vietnam"
+        // }
+        db.City.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        .select('name country latitude longitude')
+        .exec((error, result) => res.json(result))
+    },
+
     addPlace: function(req, res){
-        //req should contain: id of the city to add to in params, object containing all info needed to construct a place, and the type of place (sites, restaurants, bathrooms)
-        let placeType = req.body.category
+        //req should contain: id of the city to add to (under param "cityid"), object (under prop "place") containing all info needed to construct a place, including the type of place (site, restaurant, bathroom)
+        //e.g.
+        // url: http://localhost:3001/api/city/id/59e18dbae9eb0a1b2cf58412/site
+        //{
+        // 	"type": "site",
+        // 	"name": "Test Site"
+        // }
+        let placeType = req.params.type;
         if(placeType === "bathroom"){
             var model = db.Bathrooms;
         }
@@ -44,21 +75,21 @@ module.exports = {
             var model = db.Locations;
         }
         //create the instance
-        model.create(req.body.info)
+        model.create(req.body)
         .then(infoModel => {
             //add it to the city
             if(placeType==="bathroom"){
-                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)}, {$push: {"bathrooms": infoModel._id}}, {new: true})
+                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.cityid)}, {$push: {"bathrooms": infoModel._id}}, {new: true})
                 .populate("sites restaurants bathrooms")
                 .exec((error, result) => res.json(result))
             }
             else if(placeType==="restaurant"){
-                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)}, {$push: {"restaurants": infoModel._id}}, {new: true})
+                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.cityid)}, {$push: {"restaurants": infoModel._id}}, {new: true})
                 .populate("sites restaurants bathrooms")
                 .exec((error, result) => res.json(result))
             }
             else {
-                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)}, {$push: {"sites": infoModel._id}}, {new: true})
+                db.City.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.cityid)}, {$push: {"sites": infoModel._id}}, {new: true})
                 .populate("sites restaurants bathrooms")
                 .exec((error, result) => res.json(result))
             }
@@ -69,16 +100,19 @@ module.exports = {
         })
     },
 
-    updateCity : function(req, res){
-        res.json("test")
-    },
-
-    updatePlace : function(req, res){
-        res.json("test")
-    },
-
-    test : function(req, res){
-        res.json("test")
+    deleteCity : function(req, res){
+        // req should contain: id in params, and nothing else
+        db.City.findById(req.params.id)
+        .then(result => {
+          // this separation of .remove, instead of using findOneAndRemove, is to make the middleware on the City model delete all the associated places. do not change it unless you have another way to delete those orphaned place documents.
+          if(result){
+            result.remove()
+            .then((result) =>
+              res.json(result)
+            );
+          } else {
+              res.json(null)
+          }       
+        });
     }
-
 }
