@@ -4,6 +4,6 @@ const placeRoutes = require("./place");
 
 // city routes
 router.use("/city", cityRoutes);
-router.use("/place", placeRoutes);
+router.use("/places", placeRoutes);
 
 module.exports = router;

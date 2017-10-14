@@ -5,12 +5,12 @@ router.route("/")
 //find all places of all types
   .get(placeController.findAll)
 
-router.route("/:type")
+router.route("/:type/city/:cityid")
   //get all of a particular type
   .get(placeController.findAllOfType)
   .post(placeController.addPlace);
 
-router.route("/:type/:id")
+router.route("/:type/place/:id")
  .get(placeController.findById)
  .post(placeController.updatePlace);
 
