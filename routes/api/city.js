@@ -10,6 +10,9 @@ router.route("/id/:id")
  .post(cityController.updateCity)
  .delete(cityController.deleteCity);
 
+ router.route("/id/:cityid/:type")
+ .post(cityController.addPlace);
+
 router.route("/:name")
   .get(cityController.findCityByName);
 

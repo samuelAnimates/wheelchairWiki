@@ -5,10 +5,10 @@ router.route("/")
 //find all places of all types
   .get(placeController.findAll)
 
-router.route("/:type/city/:cityid")
+router.route("/:type")
   //get all of a particular type
+  // to get this by city, 
   .get(placeController.findAllOfType)
-  .post(placeController.addPlace);
 
 router.route("/:type/place/:id")
  .get(placeController.findById)
