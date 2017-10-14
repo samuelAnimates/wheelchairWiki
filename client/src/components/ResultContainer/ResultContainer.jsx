@@ -20,6 +20,7 @@ const ResultContainer = props => (
                 labelColor={props.headingBgColor}
             />
         </div>
+
     </div>
 
 );

@@ -1,9 +1,28 @@
 .float-left{
     float: left;
 }
-.width-20pc{
-    width: 20%;
+.display-block{
+    display: block;
 }
-.width-80pc{
-    width: 80%;
+.margin-auto{
+    margin: auto;
+}
+.responsive-one-third-container{
+    width: 100%
+}
+
+.responsive-two-thirds-container{
+   width:  100%
+}
+.text-center{
+    text-align: center;
+}
+@media (min-width: 900px){
+    .responsive-one-third-container{
+        width: 33.3%
+    }
+    
+    .responsive-two-thirds-container{
+       width:  66.7%
+    }
 }
