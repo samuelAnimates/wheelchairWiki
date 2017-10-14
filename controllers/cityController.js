@@ -10,15 +10,13 @@ function titleize(str)
 module.exports = {
     createCity : function(req, res){
         //req should contain: an object containing the information for the city, under the "city" key
-        //e.g.:    {
-            //     "city": {
-            //         "name": "Town",
-            //         "country": "Country",
-            //         "latitude": 21,
-            //         "longitude": 22
-            //     }
-            // }
-        db.City.create(req.body.city).then(cityModel => {
+        // e.g.:    {
+        //             "name": "Town",
+        //             "country": "Country",
+        //             "latitude": 21,
+        //             "longitude": 22
+        //         }
+        db.City.create(req.body).then(cityModel => {
             res.json(cityModel)
         }).catch(function(err){
             res.status(422).json(err)
@@ -62,7 +60,7 @@ module.exports = {
     addPlace: function(req, res){
         //req should contain: id of the city to add to (under param "cityid"), object (under prop "place") containing all info needed to construct a place, including the type of place (site, restaurant, bathroom)
         //e.g.
-        // url: http://localhost:3001/api/city/id/59e18dbae9eb0a1b2cf58412/site
+        // url: http://localhost:3001/api/city/id/59e18dbDOCUMENTID0a1b2cf58412/site
         //{
         // 	"type": "site",
         // 	"name": "Test Site"
