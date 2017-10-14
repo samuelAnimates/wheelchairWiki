@@ -1,6 +1,11 @@
 var mongoose = require('mongoose');
 const db = require("../models");
 
+//https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript/196991
+function titleize(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
 
 module.exports = {
     createCity : function(req, res){
@@ -21,6 +26,7 @@ module.exports = {
     },
 
     findAll : function(req, res){
+        //req does not need to contain anything
         db.City.find({})
         .select('name country latitude longitude')
         .exec((error, result) => res.json(result))
@@ -30,6 +36,14 @@ module.exports = {
         //req should contain: id in params, and nothing else
         db.City.findById(req.params.id)
         .populate("sites restaurants bathrooms")
+        .exec((error, result) => res.json(result))
+    },
+
+    findCityByName : function(req, res){
+        //req should contain: city name in params (replace spaces with -), and nothing else
+        let cityName = titleize(req.params.name.replace(/\-/g, " "))
+        db.City.findOne({"name": cityName})
+        .select('name country latitude longitude')
         .exec((error, result) => res.json(result))
     },
 

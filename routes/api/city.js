@@ -10,4 +10,7 @@ router.route("/id/:id")
  .post(cityController.updateCity)
  .delete(cityController.deleteCity);
 
+router.route("/:name")
+  .get(cityController.findCityByName);
+
 module.exports = router;
