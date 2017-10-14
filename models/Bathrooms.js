@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bathroomSchema = new Schema({
+    type: {
+        type: String,
+        trim: true,
+        default: "bathroom"
+    },
     name: {
         type: String,
         trim: true,
