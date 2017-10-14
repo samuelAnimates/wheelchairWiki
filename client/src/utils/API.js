@@ -16,6 +16,9 @@ export default {
   addPlace: function() {
     return axios.post("/api/city/");
   },
+  editPlace: function(placeType, id, editedPlaceData){
+    return axios.post("/api/places/"+ placeType +"/"+id, editedPlaceData);
+  },
   // Adds a city
   addCity: function() {
     return axios.post("/api/city");

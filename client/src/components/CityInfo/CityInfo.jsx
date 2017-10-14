@@ -20,12 +20,12 @@ const CityInfo = props => (
         </div>
         <div className="font-exo padding-bottom-1em padding-top-1em text-center">
             <h2 className="font-size-1p75em font-weight-400">Sections</h2>
-            <a className="font-weight-600" href="#restaurants">
+            <a className="font-weight-600" href="#bathrooms">
                 <div className="bg-255-248-196 color-black padding-bottom-1em padding-top-1em">
                     <span>Bathrooms</span>
                 </div>
             </a>
-            <a className="font-weight-600" href="#restaurants">
+            <a className="font-weight-600" href="#sites">
                 <div className="bg-90-79-120 color-white padding-bottom-1em padding-top-1em">
                     <span>Sites</span>
                 </div>
