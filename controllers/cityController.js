@@ -102,7 +102,17 @@ module.exports = {
 
     deleteCity : function(req, res){
         // req should contain: id in params, and nothing else
-        db.City.findByIdAndRemove(req.params.id)
-        .then(result => res.json(result))
+        db.City.findById(req.params.id)
+        .then(result => {
+          // this separation of .remove, instead of using findOneAndRemove, is to make the middleware on the City model delete all the associated places. do not change it unless you have another way to delete those orphaned place documents.
+          if(result){
+            result.remove()
+            .then((result) =>
+              res.json(result)
+            );
+          } else {
+              res.json(null)
+          }       
+        });
     }
 }
