@@ -15,4 +15,7 @@ router.route("/:type/:id")
  .post(placeController.updatePlace)
  .delete(placeController.deletePlace);
 
+router.route("/:type/:id/link")
+ .post(placeController.addPlaceLink)
+
 module.exports = router;
