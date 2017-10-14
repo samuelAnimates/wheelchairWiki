@@ -6,12 +6,13 @@ router.route("/")
   .get(placeController.findAll)
 
 router.route("/:type")
-  //get all of a particular type
-  // to get this by city, 
+  // get all of a particular type
+  // to get this by city, use a city route to find a particular city and get the places from its properties
   .get(placeController.findAllOfType)
 
-router.route("/:type/place/:id")
- .get(placeController.findById)
- .post(placeController.updatePlace);
+router.route("/:type/:id")
+ .get(placeController.findPlaceById)
+ .post(placeController.updatePlace)
+ .delete(placeController.deletePlace);
 
 module.exports = router;

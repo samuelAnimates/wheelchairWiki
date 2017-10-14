@@ -1,11 +1,6 @@
 var mongoose = require('mongoose');
 const db = require("../models");
 
-function titleize(str)
-{
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-}
-
 module.exports = {
     findAll : function(req, res){
         //req doesn't need to contain anything
@@ -19,19 +14,57 @@ module.exports = {
     },
 
     findAllOfType : function(req, res){
-        res.json("test")
+        //req should contain the type in params
+        if(req.params.type=="bathroom"){
+            db.Bathrooms.find({})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
+        else{
+            db.Locations.find({"type":req.params.type})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
     },
 
-    findById : function(req, res){
-        res.json("test")
+    findPlaceById : function(req, res){
+        //req should contain: id in params, and nothing else
+        if(req.params.type=="bathroom"){
+            db.Bathrooms.findById(req.params.id)
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
+        else{
+            db.Locations.findById(req.params.id)
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
     },
 
     updatePlace : function(req, res){
         //req should contain: place id in params, stuff to change in an object
-        res.json("test")
+        if(req.params.type=="bathroom"){
+            db.Bathrooms.findByIdAndUpdate(req.params.id, req.body, {new: true})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
+        else{
+            db.Locations.findByIdAndUpdate(req.params.id, req.body, {new: true})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
     },
 
     deletePlace : function(req, res){
-        res.json("test")
+        if(req.params.type=="bathroom"){
+            db.Bathrooms.findByIdAndRemove(req.params.id)
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
+        else{
+            db.Locations.findByIdAndRemove(req.params.id)
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
     }
 };
