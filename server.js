@@ -3,11 +3,20 @@ const path = require("path");
 const bodyParser = require("body-parser");
 var jsonwebtoken = require("jsonwebtoken");
 var mongoose = require('mongoose');
+var passport = require('passport');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 const PORT = process.env.PORT || 3001;
 const app = express();
 var User = require('./models/User');
 const routes = require("./routes");
 
+// https://scotch.io/tutorials/easy-node-authentication-setup-and-local
+app.use(cookieParser());
+
+app.use(session({ secret: 'secret' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -26,20 +35,20 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(function(req, res, next){
-  if(req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT'){
-    jsonwebtoken.verify(req.headers.authorization.split(' ')[1], 'secret', function(err, decode) {
-      if(err) req.user = undefined;
-      else{
-        req.user = decode;
-      }
-      next();
-    })
-  } else {
-    req.user = undefined;
-    next();
-  }
-});
+// app.use(function(req, res, next){
+//   if(req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT'){
+//     jsonwebtoken.verify(req.headers.authorization.split(' ')[1], 'secret', function(err, decode) {
+//       if(err) req.user = undefined;
+//       else{
+//         req.user = decode;
+//       }
+//       next();
+//     })
+//   } else {
+//     req.user = undefined;
+//     next();
+//   }
+// });
 
 
 // Send every request to the React app
@@ -53,3 +62,5 @@ app.get("*", function(req, res) {
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
+
+module.exports = passport;

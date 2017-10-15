@@ -9,15 +9,24 @@ const userSchema = new Schema({
         unique: "Username must be unique",
         required: "Username is Required"
     },
-    hash_password: {
+    password: {
         type: String,
         required: "Password is Required"
     }
 });
 
-userSchema.methods.verifyPassword = function(password) {
-    return bcrypt.compareSync(password, this.hash_password);
-}
+// userSchema.methods.verifyPassword = function(password) {
+//     return bcrypt.compareSync(password, this.hash_password);
+// }
+
+userSchema.methods.generateHash = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+// checking if password is valid
+userSchema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.local.password);
+};
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
