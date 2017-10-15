@@ -15,10 +15,6 @@ const userSchema = new Schema({
     }
 });
 
-// userSchema.methods.verifyPassword = function(password) {
-//     return bcrypt.compareSync(password, this.hash_password);
-// }
-
 userSchema.methods.generateHash = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
