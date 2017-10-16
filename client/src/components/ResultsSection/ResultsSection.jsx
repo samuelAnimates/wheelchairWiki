@@ -25,7 +25,6 @@ const ResultsSection = props => (
                 {props.sites.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
-                            displaySiteEditPopup={props.displaySiteEditPopup}
                             site={result}
                             bgColor="bg-246-246-249"
                             headingBgColor="bg-90-79-120"
@@ -40,7 +39,6 @@ const ResultsSection = props => (
                 {props.restaurants.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
-                            displaySiteEditPopup={props.displaySiteEditPopup}
                             site={result}
                             bgColor="bg-249-255-249"
                             headingBgColor="bg-0-92-0"

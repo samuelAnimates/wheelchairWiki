@@ -1,8 +1,47 @@
+.border-bottom-gray{
+    border-bottom: 2px solid rgb(200, 200, 200);
+}
+.display-block{
+    display: block;
+}
 .float-left{
     float: left;
 }
+.font-exo{
+    font-family: 'Exo', sans-serif;
+}
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+.font-size-2p5em{
+    font-size: 2.5em;
+}
+.font-size-1p5em{
+    font-size: 1.5em;
+}
+.margin-auto{
+    margin: auto;
+}
+.padding-bottom-1em{
+    padding-bottom: 1em;
+}
+.padding-left-1em{
+    padding-left: 1em;
+}
+.padding-right-1em{
+    padding-right: 1em;  
+}
+.padding-top-1em{
+    padding-top: 1em;
+}
+.text-center{
+    text-align: center;
+}
 .width-20pc{
     width: 20%;
+}
+.width-60pc{
+    width: 60%;
 }
 .width-80pc{
     width: 80%;

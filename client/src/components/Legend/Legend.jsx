@@ -1,8 +1,8 @@
 import React from "react";
 
 const Legend = props =>(
-    <div className="display-block font-exo margin-auto text-center">
-        <table>
+    <div className="font-exo text-center">
+        <table className="margin-auto">
             <thead>
                 <tr>
                     <td className="text-center" colSpan="3">Legend</td>

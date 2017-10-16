@@ -3,8 +3,8 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import "./HomepageMapContainer.css";
 import SiteIcon from "../SiteIcon"
 
-const stamenTonerTiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-const stamenTonerAttr = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+const stamenTonerTiles = 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png';
+const stamenTonerAttr = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const zoomLevel = 1;
 const mapCenter = [0,0]
 
@@ -31,10 +31,10 @@ class HomepageMapContainer extends Component{
                             return (
                                 <Marker
                                     icon={SiteIcon}
-                                    position={[result.latitude, result.longitude]}
+                                    position={[result.longitude, result.latitude]}
                                 >
                                     <Popup>
-                                        <span>{result.name}</span>
+                                        <a href={"/viewCity/"+result._id}>{result.name}</a>
                                     </Popup>
                                 </Marker>
                             )

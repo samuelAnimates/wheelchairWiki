@@ -7,6 +7,18 @@ import './LogIn.css';
 
 class LogIn extends Component {
 
+    state = {
+        username: "",
+        password: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state)
+    };
 
     signIn = (event, userData) => {
         event.preventDefault();
@@ -14,10 +26,9 @@ class LogIn extends Component {
         .then(res =>{
             //local storage setter
             localStorage.setItem('token', res.data.token);
-            const myToken = localStorage.getItem('token');
-            console.log(myToken);
+            this.props.history.push("/");
         })
-        .catch(err => console.log(err));
+        .catch(err => alert("Oops! there was a problem logging in. Please check your credentials and try again."));
     }
 
   render() {
@@ -28,16 +39,16 @@ class LogIn extends Component {
           />
         <div>
             <form>
-                First name:
-                <input type="text" name="firstname"></input>
-                Last name:
-                <input type="text" name="lastname"></input>
+                Username:
+                <input onChange={this.handleInputChange} type="text" name="username"></input>
+                Password:
+                <input onChange={this.handleInputChange} type="text" name="password"></input>
                 <button
                     onClick={(event) => this.signIn(
                         event,
                         { 
-                            username: "smendez",
-                            password: "qwertyuiop"
+                            username: this.state.username,
+                            password: this.state.password
                         }
                     )}
                 >Log In</button>

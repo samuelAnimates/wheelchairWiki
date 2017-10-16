@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CityHeading from "../../components/CityHeading";
-import CityInfo from "../../components/CityInfo"
+import CityInfo from "../../components/CityInfo";
+import CityNavButtons from "../../components/CityNavButtons";
+import LogInSignOutButton from "../../components/LogInSignOutButton";
 import Legend from "../../components/Legend";
 import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
@@ -24,10 +26,6 @@ class City extends Component {
     this.getCity(this.props.match.params.id);
   }
 
-  displaySiteEditPopup = (site)=>{
-    console.log(site);    
-  }
-
   getCity = (id) => {
     API.getCity(id)
     .then(res =>{
@@ -36,9 +34,20 @@ class City extends Component {
     .catch(err => console.log(err));
   }
 
+  logOut = () => {
+    console.log("made ithere0");
+    localStorage.removeItem("token");
+    this.props.history.push("/");
+  }
+
   render() {
     return (
       <div>
+          <div className="float-right">
+            <LogInSignOutButton
+              logOut = {this.logOut}
+            />
+          </div>
           <CityHeading
             cityName={this.state.city.name}
             countryName={this.state.city.country}
@@ -49,6 +58,7 @@ class City extends Component {
             terrainInfo={this.state.city.terrain}
             links={this.state.city.links}
           />
+          <CityNavButtons/>
         </div>
         <main className="float-left responsive-two-thirds-container">
             <MapContainer

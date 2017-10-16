@@ -1,6 +1,9 @@
 .float-left{
     float: left;
 }
+.float-right{
+    float: right;
+}
 .display-block{
     display: block;
 }
@@ -17,7 +20,17 @@
 .text-center{
     text-align: center;
 }
+
+.navButton{
+    width: 33%;
+}
+
+
 @media (min-width: 900px){
+    .navButton{
+        width: 100%;
+    }
+
     .responsive-one-third-container{
         width: 33.3%
     }
