@@ -92,8 +92,11 @@ class ResultContainerBody extends Component {
     handleFormSubmit = event => {
         
         event.preventDefault();
-    
-        if (this.state.name && this.state.description) {
+        if (localStorage.getItem("token") == null || localStorage.getItem("token") == "" || localStorage.getItem("token") == undefined){
+            alert("Sorry, you must be logged in to edit this information!");
+            this.toggleModal();
+        }
+        else if (this.state.name && this.state.description) {
           let editedPlaceData = {
             name: this.state.name,
             description: this.state.description,
@@ -103,6 +106,10 @@ class ResultContainerBody extends Component {
           };
           this.editPlace(this.state.type, this.state.id, editedPlaceData);
           this.toggleModal();
+        }
+        else{
+            alert("Oops! Looks like there's something wrong with the info. Please make sure the site you're editing still has a name and a description, and try again!");
+            this.toggleModal();
         }
     };
 
