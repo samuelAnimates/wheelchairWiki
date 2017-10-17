@@ -28,6 +28,9 @@
 .font-weight-400{
     font-weight: 400;
 }
+.line-height{
+    padding-top: 1em;
+}
 .padding-bottom-1em{
     padding-bottom: 1em;
 }
@@ -49,8 +52,14 @@
 .text-right{
     text-align: right;
 }
+.width-20pc{
+    width: 20%;
+}
 .width-50pc{
     width: 50%;
+}
+.width-80pc{
+    width: 80%;
 }
 .width-100pc{
     width: 100%;

@@ -12,30 +12,30 @@ class CityNavButtons extends Component {
                 <div id="navButtons"> 
                     <a className="font-weight-600" href="#bathrooms">
                         <button className="bg-255-248-196 navButton">
-                            <div className="float-left text-right width-50pc">
-                                <img className="text-right" src="../assets/icons/bathroom-circle-icon.svg" alt=""/>
+                            <div className="float-left text-right width-20pc">
+                                <img className="text-right" src="../assets/icons/bathroom-circle-icon.svg" alt="Bathroom Icon"/>
                             </div>
-                            <div className="float-left padding-bottom-1em padding-left-1em padding-top-1em width-50pc text-left">
+                            <div className="float-left padding-bottom-1em padding-top-1em width-80pc text-center">
                                     <span>Bathrooms</span>
                             </div>
                         </button>
                     </a>
                     <a className="font-weight-600" href="#sites">
                         <button className="bg-90-79-120 color-white navButton">
-                            <div className="float-left text-right width-50pc">
-                                <img className="text-right" src="../assets/icons/site-circle-icon.svg" alt=""/>
+                            <div className="float-left text-right width-20pc">
+                                <img className="text-right" src="../assets/icons/site-circle-icon.svg" alt="Site Icon"/>
                             </div>
-                            <div className="float-left padding-bottom-1em padding-left-1em padding-top-1em width-50pc text-left">
+                            <div className="float-left padding-bottom-1em padding-top-1em width-80pc text-center">
                                 <span>Sites</span>
                                 </div>    
                         </button>
                     </a>
                     <a className="font-weight-600 width-100pc" href="#restaurants">
                         <button className="bg-0-92-0 color-white navButton">
-                            <div className="float-left text-right width-50pc">
-                                <img className="text-right" src="../assets/icons/restaurant-circle-icon.svg" alt=""/>
+                            <div className="float-left text-right width-20pc">
+                                <img className="text-right" src="../assets/icons/restaurant-circle-icon.svg" alt="Restaurant Icon"/>
                             </div>
-                            <div className="float-left padding-bottom-1em padding-left-1em padding-top-1em width-50pc text-left">
+                            <div className="float-left padding-bottom-1em padding-top-1em width-80pc text-center">
                                 <span>Restaurants</span>
                             </div>
                         </button>
