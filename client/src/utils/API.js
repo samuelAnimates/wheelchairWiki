@@ -12,6 +12,9 @@ export default {
   signIn: function(userData) {
     return axios.post("/auth/signin", userData);
   },
+  register: function(userData) {
+    return axios.post("/auth/register", userData);
+  },
   //Route to test that JWT authentication is working
   testAuth: function(body, config) {
     return axios.post("/auth/test", body, config);

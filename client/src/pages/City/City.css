@@ -1,3 +1,6 @@
+.clear-both{
+    clear: both;
+}
 .float-left{
     float: left;
 }
@@ -25,7 +28,6 @@
     width: 33%;
 }
 
-
 @media (min-width: 900px){
     .navButton{
         width: 100%;
@@ -37,5 +39,5 @@
     
     .responsive-two-thirds-container{
        width:  66.7%
-    }
+	}
 }

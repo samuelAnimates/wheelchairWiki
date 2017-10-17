@@ -61,3 +61,23 @@ ul{
 	list-style-type: square;
 	list-style-position: inside;
 }
+
+.sticky{
+	position: fixed;
+	top: 0;
+	margin: auto;
+	text-align: center;
+	left: 0;
+	width: 100%;
+	z-index: 500;
+}
+
+@media (min-width: 900px){
+	.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 33.3%;
+		z-index: 500;
+	}
+}

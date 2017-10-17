@@ -8,12 +8,12 @@ const LogInSignOutButton = props =>(
         }
         {localStorage.getItem("token") === undefined &&
             <Link to={"/login"}>
-                <button  className="font-exo">Sign In</button>
+                <button  className="font-exo">Sign In or Register</button>
             </Link>
         }
         {localStorage.getItem("token") === null &&
             <Link to={"/login"}>
-                <button  className="font-exo">Sign In</button>
+                <button  className="font-exo">Sign In or Register</button>
             </Link>
         }
     </div>
