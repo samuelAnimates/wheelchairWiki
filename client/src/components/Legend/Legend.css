@@ -1,3 +1,6 @@
+table{
+    display: inline;
+}
 .display-block{
     display: block;
 }
@@ -9,4 +12,7 @@
 }
 .text-center{
     text-align: center;
+}
+.width-100pc{
+    width: 100%;
 }

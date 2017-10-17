@@ -1,0 +1,46 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+.clear-both{
+  clear: both;
+}
+.display-block{
+  display: block;
+}
+.float-left{
+  float: left;
+}
+.font-exo{
+  font-family: 'Exo', sans-serif;
+}
+.margin-auto{
+  margin: auto;
+}
+.modal{
+    background-color: rgb( 255, 255, 255);
+    border-Radius: 5;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    width: 80%;
+    height: 80%;  
+}
+.text-center{
+    text-align: center;
+  }
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.width-8em{
+  width: 8em;
+}

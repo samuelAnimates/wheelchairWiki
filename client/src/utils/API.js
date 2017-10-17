@@ -7,15 +7,20 @@ export default {
     return axios.get("/api/city/");
   },
   getCity: function(id) {
-    return axios.get("/api/city/" + id);
+    return axios.get("/api/city/id/" + id);
   },
-  // Adds a place to a city
-  addPlace: function() {
-    return axios.post("/api/city/");
+  signIn: function(userData) {
+    return axios.post("/auth/signin", userData);
   },
-  // Adds a city
-  addCity: function() {
-    return axios.post("/api/city");
+  //Route to test that JWT authentication is working
+  testAuth: function(body, config) {
+    return axios.post("/auth/test", body, config);
+  },
+  editPlace: function(placeType, id, editedPlaceData, config){
+    return axios.post("/api/places/"+ placeType +"/"+id, editedPlaceData, config);
+  },
+  getPlace: function(placeType, id){
+    return axios.get("/api/places/"+ placeType +"/"+id);
   }
   
 };

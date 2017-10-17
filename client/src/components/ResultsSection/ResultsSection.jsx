@@ -7,7 +7,7 @@ const ResultsSection = props => (
 
         <div className="position-relative">
             <section className="padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em width-100pc">
-                <h2 className="font-exo font-size-2p5em font-weight-400 text-center">Public Accessible Bathrooms</h2>
+                <h2 className="font-exo font-size-2p5em font-weight-400 text-center" id="bathrooms">Public Accessible Bathrooms</h2>
                 {props.bathrooms.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <BathroomContainer
@@ -15,12 +15,13 @@ const ResultsSection = props => (
                             bgColor="bg-255-253-242"
                             headingBgColor="bg-255-248-196"
                             fontColor="color-black"
+                            key={result._id}
                         />
                     </div>
                 )}   
             </section>
             <section className="padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em width-100pc">
-                <h2 className="font-exo font-size-2p5em font-weight-400 text-center">Sites</h2>
+                <h2 className="font-exo font-size-2p5em font-weight-400 text-center" id="sites">Sites</h2>
                 {props.sites.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
@@ -28,12 +29,13 @@ const ResultsSection = props => (
                             bgColor="bg-246-246-249"
                             headingBgColor="bg-90-79-120"
                             fontColor="color-white"
+                            key={result._id}
                         />
                     </div>
                 )}   
             </section>
             <section className="padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em width-100pc">
-                <h2 className="font-exo font-size-2p5em font-weight-400 text-center">Restaurants</h2>
+                <h2 className="font-exo font-size-2p5em font-weight-400 text-center" id="restaurants">Restaurants</h2>
                 {props.restaurants.map(result =>
                     <div className="padding-top-1em padding-bottom-1em">
                         <ResultContainer
@@ -41,6 +43,7 @@ const ResultsSection = props => (
                             bgColor="bg-249-255-249"
                             headingBgColor="bg-0-92-0"
                             fontColor="color-white"
+                            key={result._id}
                         />
                     </div>
                 )} 

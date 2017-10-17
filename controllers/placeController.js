@@ -61,6 +61,25 @@ module.exports = {
         }
     },
 
+    addPlaceLink : function(req, res){
+        //req should contain: the type and place id in params, an object with the link information in the body
+        //e.g. url: http://localhost:3001/api/places/bathroom/59e19DOCUMENTID04e573f/link
+        //body: {
+        // 	"url": "www.url.not",
+        // 	"title": "URL title"
+        // }
+        if(req.params.type==="bathroom"){
+            db.Bathrooms.findByIdAndUpdate(req.params.id, {$push: {"links": req.body}}, {new: true})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        } else{
+            db.Locations.findByIdAndUpdate(req.params.id, {$push: {"links": req.body}}, {new: true})
+            .then(result => res.json(result))
+            .catch(function(err){ res.status(422).json(err) })
+        }
+        
+    },
+
     deletePlace : function(req, res){
         //req should contain: place type and id in params (in that order)
         if(req.params.type=="bathroom"){

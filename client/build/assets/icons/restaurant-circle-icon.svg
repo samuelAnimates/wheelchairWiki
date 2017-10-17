@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="39.115093"
+   height="39.115536"
+   viewBox="0 0 10.349202 10.349319"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="restaurant-circle-icon.svg"
+   inkscape:export-filename="C:\Users\Owner\code\wheelchairWiki\client\public\assets\icons\restaurant-icon.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120">
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5715">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5705" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5707" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.9"
+         result="blur"
+         id="feGaussianBlur5709" />
+      <feOffset
+         dx="-7.2"
+         dy="4.7"
+         result="offset"
+         id="feOffset5711" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite5713" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5717" />
+      <feFlood
+         id="feFlood5719"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5721"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur5723"
+         in="composite1"
+         stdDeviation="3.5"
+         result="blur" />
+      <feOffset
+         id="feOffset5725"
+         dx="-4.6"
+         dy="5.1"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite5727"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="-49.707314"
+     inkscape:cy="5.699603"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.6053476,-278.31384)">
+    <ellipse
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#121212;stroke-width:0.40099999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path4509-4"
+       cx="6.7799487"
+       cy="283.48849"
+       rx="4.9741011"
+       ry="4.9741592" />
+    <g
+       id="g4760"
+       transform="translate(0.19299857,0.36380208)">
+      <g
+         transform="matrix(0.88050409,0,0,0.88050409,12.724658,33.753317)"
+         id="g4704">
+        <ellipse
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.30947414;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           id="path4583-7"
+           cx="-6.453783"
+           cy="280.79678"
+           rx="1.1694143"
+           ry="1.7660636" />
+        <ellipse
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.29337376;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           id="path4583-7-4"
+           cx="-6.453783"
+           cy="284.64777"
+           rx="0.56902051"
+           ry="2.7279344" />
+      </g>
+      <g
+         transform="matrix(0.88050409,0,0,0.88050409,12.94642,33.543807)"
+         id="g4724">
+        <ellipse
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.10730769;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           id="path4583-7-7"
+           cx="-9.0865641"
+           cy="281.0722"
+           rx="0.1405987"
+           ry="1.7660637" />
+        <ellipse
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.29195562;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           id="path4583-7-4-0"
+           cx="-9.0865641"
+           cy="284.87454"
+           rx="0.56902051"
+           ry="2.7016251" />
+        <path
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.30947414;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           d="m -7.9171497,280.64697 c -2.3e-6,0.97537 -0.5235655,1.76606 -1.1694142,1.76606 -0.6458487,0 -1.1694111,-0.79069 -1.1694141,-1.76606 -10e-7,-0.48769 0.13089,-0.9292 0.3425118,-1.2488 0.2116225,-0.3196 -0.3707798,2.74673 0.8265359,2.74277 1.1973159,-0.004 0.6156462,-3.06237 0.8272687,-2.74277 0.2116224,0.3196 0.342513,0.76111 0.3425119,1.2488 z"
+           id="ellipse4681"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sssszss" />
+      </g>
+      <g
+         transform="matrix(-0.88050409,0,0,-0.88050409,16.399966,532.67029)"
+         id="g4748">
+        <path
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.51686937;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           d="m 9.1147071,287.58286 c 0,0 -1.448678,-8.35129 -0.864628,-8.41229 0.574942,-0.0599 0.864628,8.41229 0.864628,8.41229 z"
+           id="ellipse4684"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+        <path
+           style="opacity:1;vector-effect:none;fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.51686937;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-dashoffset:523.53900146;stroke-opacity:1;paint-order:markers fill stroke"
+           d="m 8.6469854,287.6764 c 0,0 0.02573,-8.47597 0.61149,-8.43447 0.576591,0.041 -0.61149,8.43447 -0.61149,8.43447 z"
+           id="ellipse4684-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+  </g>
+</svg>

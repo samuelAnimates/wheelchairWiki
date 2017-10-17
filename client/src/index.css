@@ -50,3 +50,14 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 }
+a{
+    cursor: pointer; cursor: hand;
+}
+button{
+    cursor: pointer; cursor: hand;  
+}
+
+ul{
+	list-style-type: square;
+	list-style-position: inside;
+}

@@ -156,19 +156,6 @@ var seedSites = [
       "latitude": 10.7718007
     },
     {
-      "name": "Bitexco Tower Sky Deck (Saigon Skydeck)",
-      "description": "A skyscraper with a mall on the ground floor.",
-      "notes": "",
-      "entrance": 1,
-      "entranceNotes": "",
-      "bathroom": 1,
-      "bathroomNotes": "",
-      "links": [{"title": "",
-      "url": ""}],
-      "longitude": 106.7044406,
-      "latitude": 10.7718007
-    },
-    {
       "name": "Museum of Vietnamese History (Bảo tàng Lịch sử Việt Nam)",
       "description": "A museum that shows Vietnam’s history from all periods.",
       "notes": "The Museum of Vietnamese History is visitable for some manual wheelchair users, but it is not accessible.  Once inside, most of the museum is accessible, except for room 6-11.",
@@ -270,7 +257,7 @@ var seedRestaurants = [
       "entranceNotes": "The entrance is accessible, but you may need to ask for motorbikes to be moved away from the entrance ramp. ",
       "bathroom": 0,
       "bathroomNodes": "The nearest accessible bathroom is across the street on the ground floor of the Bitexco Tower.",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/vvgqitU3rA4" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/vvgqitU3rA4" }],
       "longitude": 106.703858,
       "latitude": 10.7718442
     },
@@ -282,7 +269,7 @@ var seedRestaurants = [
       "entranceNotes": "The entrance has a ramp, but it is very steep.",
       "bathroom": 0,
       "bathroomNodes": "The door to the large multi-stall bathroom can lock, and some wheelchair users may be able to make it work.",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/UneNKPeLOaM" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/UneNKPeLOaM" }],
       "longitude": 106.6976544,
       "latitude": 10.7773786
     },
@@ -294,7 +281,7 @@ var seedRestaurants = [
       "entranceNotes": "The small restaurant's entrance has a little step and it is not accessible. However, they do have outdoor seating at street-level tables.",
       "bathroom": 0,
       "bathroomNodes": "",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/lsFo7futqok" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/lsFo7futqok" }],
       "longitude": 106.6984438,
       "latitude": 10.7737275
     },
@@ -318,7 +305,7 @@ var seedRestaurants = [
       "entranceNotes": "The stalls are located on the streets outside of the market, and are accessible.",
       "bathroom": 0.5,
       "bathroomNodes": "The accessible public bathroom at Ben Thanh Market might be closed depending on how late it is.",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/MCvUj13bhSk" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/MCvUj13bhSk" }],
       "longitude": 106.697991,
       "latitude": 10.7725563
     },
@@ -330,7 +317,7 @@ var seedRestaurants = [
       "entranceNotes": "Some of the food stalls are close together, so it might be hard to navigate in a wheelchair.",
       "bathroom": 1,
       "bathroomNodes": "Ben Thanh Market is equipped with a wheelchair accessible bathroom near door #8.",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/LIggt7h4e04" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/LIggt7h4e04" }],
       "longitude": 106.6985241,
       "latitude": 10.7727282
     },
@@ -342,7 +329,7 @@ var seedRestaurants = [
       "entranceNotes": "All of the restaurant's seating is outdoors at street level.",
       "bathroom": 0,
       "bathroomNodes": "There isn't an accessible bathroom nearby",
-      "links": [{"title": "Muui Video Review", "link": "https://youtu.be/u-NnHVTIc-k" }],
+      "links": [{"title": "Muui Video Review", "url": "https://youtu.be/u-NnHVTIc-k" }],
       "longitude": 106.6824551,
       "latitude": 10.7754405
     }
@@ -399,7 +386,7 @@ var seedBathrooms = [
     },
     {
       "name": "Bitexco Tower ground floor bathroom",
-      "notes": "Located in the shoppin center on the ground floor of the tower",
+      "notes": "Accessible bathrooms located in the shopping center on the ground floor of the tower.",
       "longitude": 106.7044839,
       "latitude": 10.7715939
     },
@@ -411,7 +398,7 @@ var seedBathrooms = [
     },
     {
       "name": "23/9 Park public bathroom",
-      "notes": "",
+      "notes": "There is an accessible public bathroom located across the street from Rain Coffee.",
       "longitude": 106.695642,
       "latitude": 10.769702
     }
