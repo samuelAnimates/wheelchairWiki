@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const passport = require('passport');
 var jsonwebtoken = require("jsonwebtoken");
 var mongoose = require('mongoose');
 const PORT = process.env.PORT || 3001;
@@ -45,6 +46,7 @@ app.use(function(req, res, next){
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(routes);
+
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

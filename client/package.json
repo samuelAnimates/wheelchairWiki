@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.16.2",
+    "bcrypt": "^1.0.3",
     "leaflet": "^1.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

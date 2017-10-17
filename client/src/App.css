@@ -9,3 +9,24 @@
 .width-80pc{
   width: 70%;
 }
+
+a{
+  cursor: pointer; cursor: hand;
+}
+button{
+  cursor: pointer; cursor: hand;  
+}
+a:hover{
+  cursor: pointer; cursor: hand;
+}
+button:hover{
+  cursor: pointer; cursor: hand;  
+}
+.hover-pointer:hover{
+  cursor: pointer; cursor: hand;
+  background-color: red;
+}
+.hover-pointer:focus{
+  cursor: pointer; cursor: hand;
+  background-color: red;
+}
