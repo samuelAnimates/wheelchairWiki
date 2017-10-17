@@ -6,6 +6,7 @@ import LogInSignOutButton from "../../components/LogInSignOutButton";
 import Legend from "../../components/Legend";
 import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
+import { StickyContainer, Sticky} from 'react-sticky';
 import API from "../../utils/API.js";
 import './City.css';
 
@@ -48,35 +49,37 @@ class City extends Component {
               logOut = {this.logOut}
             />
           </div>
-          <CityHeading
-            cityName={this.state.city.name}
-            countryName={this.state.city.country}
-          />
-        <div className="float-left responsive-one-third-container">
-          <CityInfo
-            transportationInfo={this.state.city.transportation}
-            terrainInfo={this.state.city.terrain}
-            links={this.state.city.links}
-          />
-          <CityNavButtons/>
-        </div>
-        <main className="float-left responsive-two-thirds-container">
-            <MapContainer
-              mapCenter={[this.state.city.longitude, this.state.city.latitude]}
-              sites={this.state.city.sites}
-              restaurants={this.state.city.restaurants}
-              bathrooms={this.state.city.bathrooms}
+          <div className="clear-both">
+            <CityHeading
+              cityName={this.state.city.name}
+              countryName={this.state.city.country}
             />
-            <div className="display-block margin-auto">
-              <Legend/>
-            </div>
-            <ResultsSection
-              displaySiteEditPopup={this.displaySiteEditPopup}
-              sites={this.state.city.sites}
-              restaurants={this.state.city.restaurants}
-              bathrooms={this.state.city.bathrooms}
+          </div>
+          <div className="float-left responsive-one-third-container">
+            <CityInfo
+              transportationInfo={this.state.city.transportation}
+              terrainInfo={this.state.city.terrain}
+              links={this.state.city.links}
             />
-        </main>
+            <CityNavButtons/>
+          </div>
+          <main className="float-left responsive-two-thirds-container">
+              <MapContainer
+                mapCenter={[this.state.city.longitude, this.state.city.latitude]}
+                sites={this.state.city.sites}
+                restaurants={this.state.city.restaurants}
+                bathrooms={this.state.city.bathrooms}
+              />
+              <div className="display-block margin-auto">
+                <Legend/>
+              </div>
+              <ResultsSection
+                displaySiteEditPopup={this.displaySiteEditPopup}
+                sites={this.state.city.sites}
+                restaurants={this.state.city.restaurants}
+                bathrooms={this.state.city.bathrooms}
+              />
+          </main>
       </div>
     );
   }

@@ -12,19 +12,19 @@ const Legend = props =>(
                 <tr>
                     <td>
                         <figure>
-                            <img src="../assets/icons/site-icon.png" alt="Site Icon"></img>
+                            <img src="../assets/icons/site-icon.svg" alt="Site Icon"></img>
                             <figcaption>Site</figcaption>
                         </figure>
                     </td>
                     <td>
                         <figure>
-                            <img src="../assets/icons/restaurant-icon.png" alt="Restaurant Icon"></img>
+                            <img src="../assets/icons/restaurant-icon.svg" alt="Restaurant Icon"></img>
                             <figcaption>Resturant</figcaption>
                         </figure>
                     </td>
                     <td>
                         <figure>
-                            <img src="../assets/icons/bathroom-icon.png" alt="Public Accessible Bathroom Icon"></img>
+                            <img src="../assets/icons/bathroom-icon.svg" alt="Public Accessible Bathroom Icon"></img>
                             <figcaption>Bathroom</figcaption>
                         </figure>
                     </td>

@@ -38,10 +38,10 @@ class Home extends Component {
               logOut = {this.logOut}
             />
           </div>
-          <CityHeading
-            cityName="Wheelchair Travel Wiki"
-            countryName="Click a city on the map or in the list below to get started!"
-          />
+            <CityHeading
+              cityName="Wheelchair Travel Wiki"
+              countryName="Click a city on the map or in the list below to get started!"
+            />
         <div>
           <HomepageMapContainer
             cities={this.state.cities}
