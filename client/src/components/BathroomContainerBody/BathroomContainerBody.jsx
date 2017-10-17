@@ -3,9 +3,10 @@ import API from "../../utils/API.js";
 import IconAndNote from "../IconAndNote"
 import InputText from "../InputText"
 import EditButton from "../EditButton";
-import DescriptionAndNote from "../DescriptionAndNote"
+import Description from "../Description"
 import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
+import ResultContainerHeader from "../ResultContainerHeader"
 
 class BathroomContainerBody extends Component {
     
@@ -15,16 +16,15 @@ class BathroomContainerBody extends Component {
         notes: "",
         type: "",
         id: "",
-        latitude: "",
-        links: "",
-        longitude: "",
+        latitude: null,
+        links: [],
+        longitude: null,
         isOpen: false
     }
 
     componentDidMount() {
         this.setState({
             name: this.props.bathroom.name,
-            description: this.props.bathroom.description,
             notes: this.props.bathroom.notes,
             type: this.props.bathroom.type,
             latitude: this.props.bathroom,
@@ -55,15 +55,16 @@ class BathroomContainerBody extends Component {
                 type: res.data.type
             });
         })
-        .catch(err => console.log(err));
+        .catch(err => {console.log(err)});
     
     }
 
     getPlace = (placeType, id) => {
+        console.log("MADE IT TO THE REC")
         API.getPlace(placeType, id)
         .then(res => {
+            console.log(res.data);
             this.setState({
-                description: res.data.description,
                 latitude: res.data.latitude,
                 links: res.data.links,
                 longitude: res.data.longitude,
@@ -82,7 +83,7 @@ class BathroomContainerBody extends Component {
           let editedPlaceData = {
             name: this.state.name,
             description: this.state.description,
-            notes: this.state.note
+            notes: this.state.notes
           };
           this.editPlace(this.state.type, this.state.id, editedPlaceData);
           this.toggleModal();
@@ -108,16 +109,30 @@ class BathroomContainerBody extends Component {
         return (    
             <div>
 
-                <DescriptionAndNote
-                    description={this.props.bathroom.notes}
-                />
-
+                <div>
+                    <ResultContainerHeader
+                        title= {this.state.name}
+                        bgColor= {this.props.headingColor}
+                        fontColor= {this.props.fontColor}
+                    />
+                </div>
+                <div>
+                    <Description
+                        description={this.state.notes}
+                    />
+                </div>
                 <div className="text-center">
                     <EditButton onClick={this.toggleModal}/>
                     <ModalLocationEdit show={this.state.isOpen}  onClose={this.toggleModal}
                         handleInputChange={this.handleInputChange}
                         handleFormSubmit={this.handleFormSubmit}
-                        site={this.props.site}
+                        site={{
+                            latitude: this.state.latitude,
+                            links: this.state.links,
+                            longitude: this.state.longitude,
+                            name: this.state.name,
+                            notes: this.state.notes,
+                            type: this.state.type}}
                     >
                         <div className="font-exo display-block margin-auto text-center">
                             <form className="display-inlineblock">
