@@ -28,7 +28,7 @@ module.exports = {
     },
 
     findPlaceById : function(req, res){
-        //req should contain: id in params, and nothing else
+        //req should contain: place type and id in params (in that order)
         if(req.params.type=="bathroom"){
             db.Bathrooms.findById(req.params.id)
             .then(result => res.json(result))
@@ -42,7 +42,13 @@ module.exports = {
     },
 
     updatePlace : function(req, res){
-        //req should contain: place id in params, stuff to change in an object
+        //req should contain: place type and id in params (in that order), stuff to change in an object
+        //e.g.
+        // url: http://localhost:3001/api/places/site/59e18DOCUMENTIDcf58412
+        // body: {
+        // 	"type": "site",
+        // 	"name": "Test Site 4"
+        // }
         if(req.params.type=="bathroom"){
             db.Bathrooms.findByIdAndUpdate(req.params.id, req.body, {new: true})
             .then(result => res.json(result))
@@ -75,6 +81,7 @@ module.exports = {
     },
 
     deletePlace : function(req, res){
+        //req should contain: place type and id in params (in that order)
         if(req.params.type=="bathroom"){
             db.Bathrooms.findByIdAndRemove(req.params.id)
             .then(result => res.json(result))
