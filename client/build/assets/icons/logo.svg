@@ -16,9 +16,9 @@
    id="svg8"
    inkscape:version="0.92.1 r15371"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="C:\Users\Owner\code\wheelchairWiki\client\public\favicon.png"
-   inkscape:export-xdpi="98.912254"
-   inkscape:export-ydpi="98.912254">
+   inkscape:export-filename="C:\Users\Owner\code\wheelchairWiki\client\public\assets\icons\logo_200.png"
+   inkscape:export-xdpi="136.00999"
+   inkscape:export-ydpi="136.00999">
   <defs
      id="defs2">
     <filter
@@ -287,7 +287,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

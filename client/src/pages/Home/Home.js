@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import CityHeading from "../../components/CityHeading";
+import GradientBackground from "../../components/GradientBackground";
 import HomepageMapContainer from "../../components/HomepageMapContainer";
 import LogInSignOutButton from "../../components/LogInSignOutButton";
 import API from "../../utils/API.js";
@@ -33,16 +34,20 @@ class Home extends Component {
   render() {
     return (
       <div className="width-100pc">
-          <div className="float-right">
-            <LogInSignOutButton
-              logOut = {this.logOut}
-            />
-          </div>
-            <CityHeading
-              cityName="Wheelchair Travel Wiki"
-              countryName="Click a city on the map or in the list below to get started!"
-            />
-        <div>
+          <GradientBackground>
+            <div className="text-center width-100pc">
+              <CityHeading
+                cityName="Wheelchair Travel Wiki"
+                countryName="Click a city on the map or in the list below to get started!"
+              />
+              <div className="padding-top-1em">
+                <LogInSignOutButton
+                  logOut = {this.logOut}
+                />
+              </div>
+            </div>
+          </GradientBackground>
+        <div className="padding-top-1em">
           <HomepageMapContainer
             cities={this.state.cities}
           />

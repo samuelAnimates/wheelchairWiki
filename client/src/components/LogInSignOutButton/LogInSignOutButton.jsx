@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LogInSignOutButton = props =>(
-    <div>
+    <div className="display-inline">
         {localStorage.getItem("token") != null &&
-            <button className="font-exo" onClick={props.logOut}>Log Out</button>
+            <a className="font-exo" onClick={props.logOut}>Log Out</a>
         }
         {localStorage.getItem("token") === undefined &&
             <Link to={"/login"}>
-                <button  className="font-exo">Sign In or Register</button>
+                <a  className="font-exo">Sign In or Register</a>
             </Link>
         }
         {localStorage.getItem("token") === null &&
             <Link to={"/login"}>
-                <button  className="font-exo">Sign In or Register</button>
+                <a  className="font-exo">Sign In or Register</a>
             </Link>
         }
     </div>

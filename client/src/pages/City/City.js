@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import CityHeading from "../../components/CityHeading";
 import CityInfo from "../../components/CityInfo";
 import CityNavButtons from "../../components/CityNavButtons";
+import GradientBackground from "../../components/GradientBackground";
+import HomeButton from "../../components/HomeButton";
 import LogInSignOutButton from "../../components/LogInSignOutButton";
 import Legend from "../../components/Legend";
 import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
-import { StickyContainer, Sticky} from 'react-sticky';
 import API from "../../utils/API.js";
 import './City.css';
 
@@ -44,42 +45,51 @@ class City extends Component {
   render() {
     return (
       <div>
-          <div className="float-right">
-            <LogInSignOutButton
-              logOut = {this.logOut}
-            />
-          </div>
-          <div className="clear-both">
-            <CityHeading
-              cityName={this.state.city.name}
-              countryName={this.state.city.country}
-            />
-          </div>
-          <div className="float-left responsive-one-third-container">
-            <CityInfo
-              transportationInfo={this.state.city.transportation}
-              terrainInfo={this.state.city.terrain}
-              links={this.state.city.links}
-            />
-            <CityNavButtons/>
-          </div>
-          <main className="float-left responsive-two-thirds-container">
-              <MapContainer
-                mapCenter={[this.state.city.longitude, this.state.city.latitude]}
-                sites={this.state.city.sites}
-                restaurants={this.state.city.restaurants}
-                bathrooms={this.state.city.bathrooms}
+          <GradientBackground>
+            <div className="text-center width-100pc">
+              <CityHeading
+                cityName={this.state.city.name}
+                countryName={this.state.city.country}
               />
-              <div className="display-block margin-auto">
-                <Legend/>
+            </div>
+            <div className="padding-top-1em text-center">
+              <div className="display-inline padding-right-p5em">
+                <HomeButton/>
               </div>
-              <ResultsSection
-                displaySiteEditPopup={this.displaySiteEditPopup}
-                sites={this.state.city.sites}
-                restaurants={this.state.city.restaurants}
-                bathrooms={this.state.city.bathrooms}
+              <div className="display-inline padding-leftt-p5em">
+                <LogInSignOutButton
+                  logOut = {this.logOut}
+                />
+              </div>
+            </div>
+          </GradientBackground>
+          <div className="padding-top-1em">
+            <div className="float-left padding-top-1em responsive-one-third-container">
+              <CityInfo
+                transportationInfo={this.state.city.transportation}
+                terrainInfo={this.state.city.terrain}
+                links={this.state.city.links}
               />
-          </main>
+              <CityNavButtons/>
+            </div>
+            <main className="float-left responsive-two-thirds-container">
+                <MapContainer
+                  mapCenter={[this.state.city.longitude, this.state.city.latitude]}
+                  sites={this.state.city.sites}
+                  restaurants={this.state.city.restaurants}
+                  bathrooms={this.state.city.bathrooms}
+                />
+                <div className="display-block margin-auto">
+                  <Legend/>
+                </div>
+                <ResultsSection
+                  displaySiteEditPopup={this.displaySiteEditPopup}
+                  sites={this.state.city.sites}
+                  restaurants={this.state.city.restaurants}
+                  bathrooms={this.state.city.bathrooms}
+                />
+            </main>
+          </div>
       </div>
     );
   }

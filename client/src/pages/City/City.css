@@ -10,8 +10,20 @@
 .display-block{
     display: block;
 }
+.display-inline{
+    display: inline;
+}
 .margin-auto{
     margin: auto;
+}
+.padding-top-1em{
+    padding-top: 1em;
+}
+.padding-left-p5em{
+    padding-left: 0.5em;
+}
+.padding-right-p5em{
+    padding-right: 0.5em;
 }
 .responsive-one-third-container{
     width: 100%

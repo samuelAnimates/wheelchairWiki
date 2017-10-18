@@ -92,7 +92,7 @@ class ResultContainerBody extends Component {
     handleFormSubmit = event => {
         
         event.preventDefault();
-        if (localStorage.getItem("token") == null || localStorage.getItem("token") == "" || localStorage.getItem("token") == undefined){
+        if (localStorage.getItem("token") === null || localStorage.getItem("token") === "" || localStorage.getItem("token") === undefined){
             alert("Sorry, you must be logged in to edit this information!");
             this.toggleModal();
         }

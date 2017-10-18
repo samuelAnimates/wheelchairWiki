@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import API from "../../utils/API.js";
-import IconAndNote from "../IconAndNote"
 import InputText from "../InputText"
 import EditButton from "../EditButton";
 import Description from "../Description"
-import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
 import ResultContainerHeader from "../ResultContainerHeader"
 
@@ -78,7 +76,7 @@ class BathroomContainerBody extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        if (localStorage.getItem("token") == null || localStorage.getItem("token") == "" || localStorage.getItem("token") == undefined){
+        if (localStorage.getItem("token") === null || localStorage.getItem("token") === "" || localStorage.getItem("token") === undefined){
             alert("Sorry, you must be logged in to edit this information!");
         }
         else if (this.state.name) {
