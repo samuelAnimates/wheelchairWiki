@@ -1,26 +1,8 @@
-.bg-246-246-249{
-	background-color: rgb(246,246,249);
-}
-.bg-249-255-249{
-    background-color: rgb(249,255,249);
-}
-.bg-255-253-242{
-    background-color: rgb(255,253,242);
-}
-.color-black{
-    color: black;
-}
-.color-white{
-    color: white;
-}
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
 .font-opensans{
     font-family: 'Open Sans', sans-serif;
-}
-.font-size-2p5em{
-    font-size: 2.5em;
 }
 .font-size-1p75em{
     font-size: 1.75em;
@@ -43,3 +25,8 @@
 .text-center{
     text-align: center;
 }
+
+
+
+
+

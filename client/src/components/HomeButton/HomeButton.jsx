@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Home = props =>(
     <div className="display-inline">
         <Link to={"/"}>
-                <a  className="font-exo">Home</a>
+                <a className="font-exo">Home</a>
          </Link>
     </div>
 );

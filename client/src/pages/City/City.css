@@ -1,23 +1,14 @@
-.clear-both{
-    clear: both;
-}
-.float-left{
-    float: left;
-}
-.float-right{
-    float: right;
-}
 .display-block{
     display: block;
 }
 .display-inline{
     display: inline;
 }
+.float-left{
+    float: left;
+}
 .margin-auto{
     margin: auto;
-}
-.padding-top-1em{
-    padding-top: 1em;
 }
 .padding-left-p5em{
     padding-left: 0.5em;
@@ -25,15 +16,20 @@
 .padding-right-p5em{
     padding-right: 0.5em;
 }
+.padding-top-1em{
+    padding-top: 1em;
+}
 .responsive-one-third-container{
     width: 100%
 }
-
 .responsive-two-thirds-container{
-   width:  100%
-}
+    width:  100%
+ }
 .text-center{
     text-align: center;
+}
+.width-100pc{
+    width: 100%;
 }
 
 .navButton{

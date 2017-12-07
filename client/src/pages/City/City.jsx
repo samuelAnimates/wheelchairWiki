@@ -56,7 +56,7 @@ class City extends Component {
               <div className="display-inline padding-right-p5em">
                 <HomeButton/>
               </div>
-              <div className="display-inline padding-leftt-p5em">
+              <div className="display-inline padding-left-p5em">
                 <LogInSignOutButton
                   logOut = {this.logOut}
                 />
@@ -65,14 +65,34 @@ class City extends Component {
           </GradientBackground>
           <div className="padding-top-1em">
             <div className="float-left padding-top-1em responsive-one-third-container">
-              <CityInfo
-                transportationInfo={this.state.city.transportation}
-                terrainInfo={this.state.city.terrain}
-                links={this.state.city.links}
-              />
-              <CityNavButtons/>
+              <ul>
+                <li>
+                  City Overview
+                  <ul>
+                    <li>Terrain</li>
+                    <li>Transportation</li>
+                  </ul>
+                </li>
+                <li>
+                  City Map
+                </li>
+                <li>
+                  City Site List
+                  <ul>
+                    <li>Public Accessible Bathrooms</li>
+                    <li>Sites</li>
+                    <li>Restaurants</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <main className="float-left responsive-two-thirds-container">
+                <CityInfo
+                  transportationInfo={this.state.city.transportation}
+                  terrainInfo={this.state.city.terrain}
+                  links={this.state.city.links}
+                />
+                <CityNavButtons/>
                 <MapContainer
                   mapCenter={[this.state.city.longitude, this.state.city.latitude]}
                   sites={this.state.city.sites}

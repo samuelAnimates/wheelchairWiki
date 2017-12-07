@@ -1,27 +1,15 @@
-.bg-white{
-    background-color: white;
-}
-.clear-both{
-    clear: both;
-}
-.float-left{
-    float: left;
-}
-.font-size-1em{
-    font-size: 1em;
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;  
 }
 .font-size-p75em{
    font-size: 0.75em; 
 }
+.font-size-1em{
+    font-size: 1em;
+}
+.font-weight-400{
+    font-weight: 400;
+}
 .font-weight-600{
     font-weight: 600;
-}
-.padding-left-p25em{
-    padding-left:0.25em;
-}
-.position-relative{
-    position: relative;
-}
-.padding-top-p25em{
-    padding-top: 0.25em;
 }

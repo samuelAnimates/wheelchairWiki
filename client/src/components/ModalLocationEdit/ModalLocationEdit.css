@@ -7,24 +7,7 @@
     background-color: rgba(0,0,0,0.3);
     z-index: 2000;
 }
-.clear-both{
-  clear: both;
-}
-.display-block{
-  display: block;
-}
-.display-inlineblock{
-  display: inline-block;
-}
-.float-left{
-  float: left;
-}
-.font-exo{
-  font-family: 'Exo', sans-serif;
-}
-.margin-auto{
-  margin: auto;
-}
+
 .modal{
     background-color: rgb( 255, 255, 255);
     border-Radius: 5;
@@ -33,15 +16,4 @@
     position: absolute;
     width: 80%;
     height: 80%;  
-}
-
-.text-left{
-  text-align: left;
-}
-.text-right{
-  text-align: right;
-}
-
-.width-8em{
-  width: 8em;
 }

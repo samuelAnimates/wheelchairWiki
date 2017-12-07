@@ -3,7 +3,7 @@ import "./IconAndNote.css";
 import Note from "../Note";
 
 const IconAndNote = props => (
-    <div className="padding-bottom-1em padding-left-1em padding-right-1em">
+    <div className="padding-bottom-1em padding-left-1em padding-right-1em float-left width-100pc">
         <div className="display-block margin-auto padding-left-1em padding-right-1em padding-top-1em text-center">
             <h3 className="font-exo font-size-1p25em font-weight-600 text-center">{props.title}</h3>
             <img className="display-block margin-auto max-width-10em text-center width-40pc" src={props.logoPath} alt={props.alt}></img>
