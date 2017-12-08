@@ -8,6 +8,7 @@ import LogInSignOutButton from "../../components/LogInSignOutButton";
 import Legend from "../../components/Legend";
 import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
+import TableOfContents from "../../components/TableOfContents";
 import API from "../../utils/API.js";
 import './City.css';
 
@@ -64,29 +65,10 @@ class City extends Component {
             </div>
           </GradientBackground>
           <div className="padding-top-1em">
-            <div className="float-left padding-top-1em responsive-one-third-container">
-              <ul>
-                <li>
-                  City Overview
-                  <ul>
-                    <li>Terrain</li>
-                    <li>Transportation</li>
-                  </ul>
-                </li>
-                <li>
-                  City Map
-                </li>
-                <li>
-                  City Site List
-                  <ul>
-                    <li>Public Accessible Bathrooms</li>
-                    <li>Sites</li>
-                    <li>Restaurants</li>
-                  </ul>
-                </li>
-              </ul>
+            <div className="float-left padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em responsive-one-third-container">
+              <TableOfContents/>
             </div>
-            <main className="float-left responsive-two-thirds-container">
+            <main className="float-left padding-top-1em responsive-two-thirds-container">
                 <CityOverview
                   transportationInfo={this.state.city.transportation}
                   terrainInfo={this.state.city.terrain}
