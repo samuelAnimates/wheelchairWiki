@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CityHeading from "../../components/CityHeading";
-import CityInfo from "../../components/CityInfo";
+import CityOverview from "../../components/CityOverview";
 import CityNavButtons from "../../components/CityNavButtons";
 import GradientBackground from "../../components/GradientBackground";
 import HomeButton from "../../components/HomeButton";
@@ -87,7 +87,7 @@ class City extends Component {
               </ul>
             </div>
             <main className="float-left responsive-two-thirds-container">
-                <CityInfo
+                <CityOverview
                   transportationInfo={this.state.city.transportation}
                   terrainInfo={this.state.city.terrain}
                   links={this.state.city.links}
