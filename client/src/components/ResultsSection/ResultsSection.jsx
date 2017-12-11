@@ -6,7 +6,7 @@ import BathroomContainer from "../BathroomContainer";
 const ResultsSection = props => (
 
         <div className="position-relative" id="resultsSection">
-            <h2 className="text-center">RESULTS SECTION</h2>
+            <h2 className="text-center" id="city-attractions">City Attractions</h2>
             <section className="padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em width-100pc">
                 <h3 className="text-center" id="bathrooms">Public Accessible Bathrooms</h3>
                 {props.bathrooms.map(result =>

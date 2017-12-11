@@ -69,27 +69,32 @@ class City extends Component {
               <TableOfContents/>
             </div>
             <main className="float-left padding-top-1em responsive-two-thirds-container">
-                <CityOverview
-                  transportationInfo={this.state.city.transportation}
-                  terrainInfo={this.state.city.terrain}
-                  links={this.state.city.links}
-                />
-                <CityNavButtons/>
-                <MapContainer
-                  mapCenter={[this.state.city.longitude, this.state.city.latitude]}
-                  sites={this.state.city.sites}
-                  restaurants={this.state.city.restaurants}
-                  bathrooms={this.state.city.bathrooms}
-                />
-                <div className="display-block margin-auto">
-                  <Legend/>
-                </div>
-                <ResultsSection
-                  displaySiteEditPopup={this.displaySiteEditPopup}
-                  sites={this.state.city.sites}
-                  restaurants={this.state.city.restaurants}
-                  bathrooms={this.state.city.bathrooms}
-                />
+                <section className="padding-bottom-1em padding-top-1em">
+                  <CityOverview
+                    transportationInfo={this.state.city.transportation}
+                    terrainInfo={this.state.city.terrain}
+                    links={this.state.city.links}
+                  />
+                </section>
+                <section className="padding-bottom-1em padding-top-1em">
+                  <MapContainer
+                    mapCenter={[this.state.city.longitude, this.state.city.latitude]}
+                    sites={this.state.city.sites}
+                    restaurants={this.state.city.restaurants}
+                    bathrooms={this.state.city.bathrooms}
+                  />
+                  <div className="display-block margin-auto">
+                    <Legend/>
+                  </div>
+                </section>
+                <section className="padding-bottom-1em padding-top-1em">
+                  <ResultsSection
+                    displaySiteEditPopup={this.displaySiteEditPopup}
+                    sites={this.state.city.sites}
+                    restaurants={this.state.city.restaurants}
+                    bathrooms={this.state.city.bathrooms}
+                  />
+                </section>
             </main>
           </div>
       </div>

@@ -15,15 +15,16 @@ class TableOfContents extends Component {
                 <div className="font-size-p85em">
                     <ul>
                         <li>
-                            City Overview
+                            <a href="#city-overview">City Overview</a>
                             <ul className="padding-left-1p5em">
-                                <li>Terrain</li>
-                                <li>Transportation</li>
+                                <li><a href="#city-overview-terrain">Terrain</a></li>
+                                <li><a href="#city-overview-transportation">Transportation</a></li>
+                                <li><a href="#city-overview-links">Links</a></li>
                             </ul>
                         </li>
-                        <li>City Map</li>
+                        <li><a href="#city-map">City Map</a></li>
                         <li>
-                            City Site List
+                            <a href="#city-attractions">City Attractions</a>
                             <ul className="padding-left-1p5em">
                                 <li><a href="#bathrooms">Public Accessible Bathrooms</a></li>
                                 <li><a href="#sites">Sites</a></li>
