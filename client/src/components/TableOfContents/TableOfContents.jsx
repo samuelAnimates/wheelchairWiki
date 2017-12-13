@@ -10,7 +10,7 @@ class TableOfContents extends Component {
 
     render (){
         return(
-            <div className="display-block font-exo margin-auto width">
+            <div className="bg-255-253-242 border-color border-style-solid border-width-2px display-block font-exo margin-auto max-width-17p5em padding-bottom-1p5em padding-left-1p5em padding-right-1p5em padding-top-1p5em">
                 <h2>Contents</h2>
                 <div className="font-size-p85em">
                     <ul>
