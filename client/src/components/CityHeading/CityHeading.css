@@ -10,20 +10,11 @@
 .font-weight-600{
     font-weight: 600;
 }
-.height{
+.height-p75em{
     height: .75em;
 }
-.padding-bottom-1em{
-    padding-bottom: 1em;
-}
-.padding-left-1em{
-    padding-left: 1em;
-}
-.padding-right-1em{
-    padding-right: 1em;
-}
-.padding-top-1em{
-    padding-top: 1em;
+.padding-top-p5em{
+    padding-top: 0.5em;
 }
 .text-center{
     text-align: center;   

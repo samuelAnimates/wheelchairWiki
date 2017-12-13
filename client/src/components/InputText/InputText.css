@@ -1,28 +1,15 @@
 .clear-both{
-    clear: both;
-  }
-  .display-block{
-    display: block;
-  }
-  .float-left{
-    float: left;
-  }
-  .font-exo{
-    font-family: 'Exo', sans-serif;
-  }
-  .margin-auto{
-    margin: auto;
-  }
-  .text-center{
-      text-align: center;
-    }
-  .text-left{
-    text-align: left;
-  }
-  .text-right{
-    text-align: right;
-  }
-  
-  .width-8em{
-    width: 8em;
-  }
+  clear: both;
+}
+.float-left{
+  float: left;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.width-8em{
+  width: 8em;
+}

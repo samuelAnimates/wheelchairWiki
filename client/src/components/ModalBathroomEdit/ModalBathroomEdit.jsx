@@ -108,7 +108,7 @@ class ModalBathroomEdit extends Component {
             </form> 
           </div>
           
-          <div className="footer">
+          <div>
             <button onClick={this.props.onClose}>
               Close
             </button>

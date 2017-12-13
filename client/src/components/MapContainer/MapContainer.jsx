@@ -19,6 +19,7 @@ class MapContainer extends Component{
     render() {
         return (
             <div className="display-block margin-auto">
+                <h2 className="text-center" id="city-map">City Map</h2>
                 <Map
                     center={this.props.mapCenter}
                     zoom={zoomLevel}

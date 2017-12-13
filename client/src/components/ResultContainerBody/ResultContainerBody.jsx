@@ -214,7 +214,7 @@ class ResultContainerBody extends Component {
                 </div>
 
                 <div>
-                    <h2 className="font-exo font-weight-400 text-center">Links</h2>
+                    <h5 className="text-center">Links</h5>
                     <LinksPanel
                         links= {this.state.links}
                     />

@@ -137,7 +137,7 @@ class BathroomContainerBody extends Component {
                             notes: this.state.notes,
                             type: this.state.type}}
                     >
-                        <div className="font-exo display-block margin-auto text-center">
+                        <div className="display-block font-exo margin-auto text-center">
                             <form className="display-inlineblock">
                                 <InputText
                                     onChange={this.handleInputChange}
