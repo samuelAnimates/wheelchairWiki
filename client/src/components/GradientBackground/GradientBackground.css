@@ -2,5 +2,5 @@
     padding: 1em 1em 1em 1em;
 }
 .gradient{
-    background: linear-gradient(45deg, #FFFDF2, #F6F6F9);
+    background: linear-gradient(45deg, rgb(255, 253, 242), rgb(246, 246, 249));
 }
