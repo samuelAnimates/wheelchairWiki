@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CityHeading from "../../components/CityHeading";
 import CityOverview from "../../components/CityOverview";
-import CityNavButtons from "../../components/CityNavButtons";
 import GradientBackground from "../../components/GradientBackground";
 import HomeButton from "../../components/HomeButton";
 import LogInSignOutButton from "../../components/LogInSignOutButton";

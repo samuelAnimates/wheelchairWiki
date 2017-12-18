@@ -1,5 +1,4 @@
 import React from 'react';
-
 class StickyDiv extends React.Component {
   
     componentDidMount() {

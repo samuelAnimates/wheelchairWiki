@@ -4,6 +4,9 @@
 .bg-246-246-249{
     background-color: rgb(246, 246, 249);
 }
+.bg-249-255-249{
+    background-color: rgb(246, 255, 249);
+}
 .border-radius-p25-1p4-p75em{
     border-radius: .25em 1.4em .75em;
 }

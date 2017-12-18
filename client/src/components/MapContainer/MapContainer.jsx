@@ -19,7 +19,10 @@ class MapContainer extends Component{
     render() {
         return (
             <div className="display-block margin-auto">
-                <h2 className="text-center" id="city-map">City Map</h2>
+                <div className="padding-bottom-1em padding-top-1em text-center">
+                    <h2  id="city-map">City Map</h2>
+                    <a className="font-opensans" href="#resultsSection">Click here to skip past the map to to the list view of this city's reviewed sites</a>
+                </div>
                 <Map
                     center={this.props.mapCenter}
                     zoom={zoomLevel}
