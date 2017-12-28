@@ -1,0 +1,26 @@
+.bg-90-79-120{
+	background-color: rgb(90, 79, 120);
+}
+.bg-246-246-249{
+    background-color: rgb(246, 246, 249);
+}
+.bg-249-255-249{
+    background-color: rgb(246, 255, 249);
+}
+.border-radius-p25-1p4-p75em{
+    border-radius: .25em 1.4em .75em;
+}
+.border-style-solid{
+    border-style: solid;
+}
+.border-width-2px{
+    border-width: 2px;
+}
+.box-shadow{
+    box-shadow: .1em .1em .5em #aaaaaa;
+}
+
+
+.border-top-right-rad-1p25em{
+    border-top-right-radius: 1.25em;
+}

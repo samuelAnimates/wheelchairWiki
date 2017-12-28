@@ -21,7 +21,7 @@ class MapContainer extends Component{
             <div className="display-block margin-auto">
                 <div className="padding-bottom-1em padding-top-1em text-center">
                     <h2  id="city-map">City Map</h2>
-                    <a className="font-opensans" href="#resultsSection">Click here to skip past the map to to the list view of this city's reviewed sites</a>
+                    <a className="font-opensans" href="#resultsSection">Click here to skip past the map view and jump to the list view of this city's sites.</a>
                 </div>
                 <Map
                     center={this.props.mapCenter}
