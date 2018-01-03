@@ -131,7 +131,7 @@ class ResultContainerBody extends Component {
         return(
             <div>
                 <div>
-                    <div>
+                    <div id={this.state.id}>
                         <ResultContainerHeader
                             title= {this.state.name}
                             bgColor= {this.props.labelColor}

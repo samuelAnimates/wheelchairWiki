@@ -39,7 +39,7 @@ class MapContainer extends Component{
                                     position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
-                                        <span>{result.name}</span>
+                                        <a href={"#"+result._id}>{result.name}</a>
                                     </Popup>
                                 </Marker>
                             )
@@ -53,7 +53,7 @@ class MapContainer extends Component{
                                     position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
-                                        <span>{result.name}</span>
+                                        <a href={"#"+result._id}>{result.name}</a>
                                     </Popup>
                                 </Marker>
                             )
@@ -67,7 +67,7 @@ class MapContainer extends Component{
                                     position={[result.latitude, result.longitude]}
                                 >
                                     <Popup>
-                                        <span>{result.name}</span>
+                                        <a href={"#"+result._id}>{result.name}</a>
                                     </Popup>
                                 </Marker>
                             )

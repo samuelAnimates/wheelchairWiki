@@ -55,11 +55,17 @@
 .position-relative{
     position: relative;
 }
+.text-center{
+    text-align: center;
+}
 .text-left{
     text-align: left;
 }
-.width-1p5em{
-    width: 1.5em;
+.top-p35em{
+    top: .35em;
+}
+.height-1p1em{
+    width: 1.4em;
 }
 .width-100pc{
     width: 100%;

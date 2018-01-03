@@ -19,6 +19,9 @@
 .margin-auto{
     margin: auto;
 }
+.padding-top-p5em{
+    padding-top: .5em
+}
 .text-center{
     text-align: center;
 }

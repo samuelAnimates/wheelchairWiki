@@ -3,7 +3,7 @@ import API from "../../utils/API.js";
 import IconAndNoteCondensed from "../IconAndNoteCondensed"
 import InputText from "../InputText"
 import EditButton from "../EditButton";
-import DescriptionAndNote from "../DescriptionAndNote";
+import DescriptionAndNoteCondensed from "../DescriptionAndNoteCondensed";
 import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
 import ResultContainerHeaderCondensed from "../ResultContainerHeaderCondensed"
@@ -138,7 +138,7 @@ class ResultContainerBodyCondensed extends Component {
                             fontColor= {this.props.fontColor}
                         />
                     </div>
-                    <div className="float-left width-100pc">
+                    <div className="float-left width-50pc">
                         {this.props.site.entrance === 1 &&
                             <IconAndNoteCondensed
                                 title="Entrance"
@@ -152,9 +152,9 @@ class ResultContainerBodyCondensed extends Component {
                         {this.props.site.entrance === 0.5 &&
                             <IconAndNoteCondensed
                                 title="Entrance"
-                                label="Semi Accessible"
+                                label="Mixed Accessibility"
                                 labelColor={this.props.labelColor}
-                                alt="'Semi Accessible' Icon"
+                                alt="'Mixed Accessibility' Icon"
                                 logoPath="../assets/icons/semi-accessible.svg"
                                 notes={this.state.entranceNotes}
                             />
@@ -171,7 +171,7 @@ class ResultContainerBodyCondensed extends Component {
                         }
                     </div>
 
-                    <div className="float-left width-100pc">
+                    <div className="float-left width-50pc">
                         {this.props.site.bathroom === 1 &&
                             <IconAndNoteCondensed
                                 title="Bathroom"
@@ -185,9 +185,9 @@ class ResultContainerBodyCondensed extends Component {
                         {this.props.site.bathroom === 0.5 &&
                             <IconAndNoteCondensed
                                 title="Bathroom"
-                                label="Semi Accessible"
+                                label="Mixed Accessibility"
                                 labelColor={this.props.labelColor}
-                                alt="'Semi Accessible' Icon"
+                                alt="'Mixed Accessibility' Icon"
                                 logoPath="../assets/icons/semi-accessible.svg"
                                 notes={this.state.bathroomNotes}
                             />
@@ -207,13 +207,13 @@ class ResultContainerBodyCondensed extends Component {
                 </div>
 
                 <div className="clear-both">
-                    <DescriptionAndNote
+                    <DescriptionAndNoteCondensed
                         description={this.state.description}
                         notes={this.state.notes}
                     />
                 </div>
 
-                <div>
+                <div className="padding-top-p5em">
                     <h5 className="text-center">Links</h5>
                     <LinksPanel
                         links= {this.state.links}

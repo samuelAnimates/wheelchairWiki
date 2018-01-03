@@ -1,15 +1,36 @@
+.border-style-solid{
+    border-style: solid;
+}
+.border-width-p5px{
+    border-width: 0.5px;
+}
 .font-opensans{
     font-family: 'Open Sans', sans-serif;
 }
 .font-size-p75em{
     font-size: 0.75em;
 }
+.padding-bottom-p5em{
+    padding-bottom: .5em;
+}
 .padding-bottom-1em{
     padding-bottom: 1em;
+}
+.padding-left-p25em{
+    padding-left: .25em;
+}
+.padding-right-p25em{
+    padding-right: .25em; 
+}
+.padding-top-p5em{
+    padding-top: .5em;
 }
 .padding-top-1em{
     padding-top: 1em;
 }
 .text-center{
     text-align: center;
+}
+.width-33p33pc{
+    width: 33.33%;
 }
