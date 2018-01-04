@@ -38,3 +38,21 @@
     width: 100%;
 }
 
+
+.logo-blue-star-1{
+    animation:spin 4s linear infinite;
+}
+.logo-blue-star-2{
+    animation:spin 4s linear infinite;
+}
+.logo-outer-circle{
+    animation:spin 4s linear infinite;   
+}
+.logo-yellow-octagon{
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin { 
+    from {background-color: rotate(0deg);}
+    to {background-color: rotate(360deg);}
+}
