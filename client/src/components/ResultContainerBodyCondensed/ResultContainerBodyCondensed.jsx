@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import API from "../../utils/API.js";
-import IconAndNote from "../IconAndNote"
+import IconAndNoteCondensed from "../IconAndNoteCondensed"
 import InputText from "../InputText"
 import EditButton from "../EditButton";
-import DescriptionAndNote from "../DescriptionAndNote";
+import DescriptionAndNoteCondensed from "../DescriptionAndNoteCondensed";
 import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
-import ResultContainerHeader from "../ResultContainerHeader"
+import ResultContainerHeaderCondensed from "../ResultContainerHeaderCondensed"
 
-class ResultContainerBody extends Component {
+class ResultContainerBodyCondensed extends Component {
     state={
         name: "",
         description: "",
@@ -131,8 +131,8 @@ class ResultContainerBody extends Component {
         return(
             <div>
                 <div>
-                    <div id={this.state.id}>
-                        <ResultContainerHeader
+                    <div>
+                        <ResultContainerHeaderCondensed
                             title= {this.state.name}
                             bgColor= {this.props.labelColor}
                             fontColor= {this.props.fontColor}
@@ -140,7 +140,7 @@ class ResultContainerBody extends Component {
                     </div>
                     <div className="float-left width-50pc">
                         {this.props.site.entrance === 1 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Entrance"
                                 label="Accessible"
                                 labelColor={this.props.labelColor}
@@ -150,17 +150,17 @@ class ResultContainerBody extends Component {
                             />
                         }
                         {this.props.site.entrance === 0.5 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Entrance"
-                                label="Semi Accessible"
+                                label="Mixed Accessibility"
                                 labelColor={this.props.labelColor}
-                                alt="'Semi Accessible' Icon"
+                                alt="'Mixed Accessibility' Icon"
                                 logoPath="../assets/icons/semi-accessible.svg"
                                 notes={this.state.entranceNotes}
                             />
                         }
                         {this.props.site.entrance === 0 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Entrance"
                                 label="Not Accessible"
                                 labelColor={this.props.labelColor}
@@ -173,7 +173,7 @@ class ResultContainerBody extends Component {
 
                     <div className="float-left width-50pc">
                         {this.props.site.bathroom === 1 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Bathroom"
                                 label="Accessible"
                                 labelColor={this.props.labelColor}
@@ -183,17 +183,17 @@ class ResultContainerBody extends Component {
                             />
                         }
                         {this.props.site.bathroom === 0.5 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Bathroom"
-                                label="Semi Accessible"
+                                label="Mixed Accessibility"
                                 labelColor={this.props.labelColor}
-                                alt="'Semi Accessible' Icon"
+                                alt="'Mixed Accessibility' Icon"
                                 logoPath="../assets/icons/semi-accessible.svg"
                                 notes={this.state.bathroomNotes}
                             />
                         }
                         {this.props.site.bathroom === 0 &&
-                            <IconAndNote
+                            <IconAndNoteCondensed
                                 title="Bathroom"
                                 label="Not Accessible"
                                 labelColor={this.props.labelColor}
@@ -207,13 +207,13 @@ class ResultContainerBody extends Component {
                 </div>
 
                 <div className="clear-both">
-                    <DescriptionAndNote
+                    <DescriptionAndNoteCondensed
                         description={this.state.description}
                         notes={this.state.notes}
                     />
                 </div>
 
-                <div>
+                <div className="padding-top-p5em">
                     <h5 className="text-center">Links</h5>
                     <LinksPanel
                         links= {this.state.links}
@@ -281,4 +281,4 @@ class ResultContainerBody extends Component {
     )}
 }
 
-export default ResultContainerBody;
+export default ResultContainerBodyCondensed;

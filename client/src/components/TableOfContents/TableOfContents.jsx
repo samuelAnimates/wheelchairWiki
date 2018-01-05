@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StickyDiv from "../StickyDiv"
+import StickyDiv from "../StickyDiv";
 import "./TableOfContents.css";
 
 class TableOfContents extends Component {
