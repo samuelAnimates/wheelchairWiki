@@ -7,6 +7,9 @@
 .float-left{
     float: left;
 }
+.font-exo{
+    font-family: 'Exo', sans-serif;
+}
 .margin-auto{
     margin: auto;
 }
@@ -18,6 +21,9 @@
 }
 .padding-top-1em{
     padding-top: 1em;
+}
+.padding-top-10em{
+    padding-top: 10em;
 }
 .responsive-one-third-container{
     width: 100%
