@@ -17,8 +17,14 @@
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
+.font-size-p75em{
+    font-size: .75em;
+}
 .font-size-p85em{
     font-size: .85em;
+}
+.line-height-1em{
+    line-height: 1em;
 }
 .margin-auto{
     margin: auto;
