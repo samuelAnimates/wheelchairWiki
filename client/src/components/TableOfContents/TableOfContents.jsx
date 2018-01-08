@@ -33,7 +33,7 @@ class TableOfContents extends Component {
                     <div className="font-exo">
                         <div className="margin-auto max-width-17em padding-left-p5em padding-bottom-1em">
                             <h2>Contents</h2>
-                            <p className="font-exo font-size-p65em line-height-1em">Click on the links in the nav box below to jump to specific sections of this page. Press "n" on your keyboard to return to the nav box at any time.</p>
+                            <p className="font-exo font-size-p65em line-height-1em">Click on the links in the nav box below to jump to specific sections of this page.</p>
                         </div>
                             <StickyDiv>
                                     <div className="margin-auto max-width-17em padding-left-p5em padding-right-p5em">
