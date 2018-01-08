@@ -4,7 +4,6 @@ import CityOverview from "../../components/CityOverview";
 import GradientBackground from "../../components/GradientBackground";
 import HomeButton from "../../components/HomeButton";
 import LogInSignOutButton from "../../components/LogInSignOutButton";
-import Legend from "../../components/Legend";
 import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
 import TableOfContents from "../../components/TableOfContents";
@@ -108,9 +107,6 @@ class City extends Component {
                       restaurants={this.state.city.restaurants}
                       bathrooms={this.state.city.bathrooms}
                     />
-                    <div className="display-block margin-auto">
-                      <Legend/>
-                    </div>
                   </section>
                   <section className="padding-bottom-1em padding-top-1em">
                     <ResultsSection
