@@ -1,7 +1,7 @@
 /*Color Scheme: http://paletton.com/#uid=74o0Y0k18O17rzm4NFO2nx-35tf*/
-div, section, main, aside {
-  box-sizing: border-box;
-}
+*, *:before, *:after {
+	box-sizing: border-box;
+  }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

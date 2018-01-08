@@ -152,9 +152,9 @@ class ResultContainerBody extends Component {
                         {this.props.site.entrance === 0.5 &&
                             <IconAndNote
                                 title="Entrance"
-                                label="Semi Accessible"
+                                label="Mixed Accessibility"
                                 labelColor={this.props.labelColor}
-                                alt="'Semi Accessible' Icon"
+                                alt="'Mixed Accessibility' Icon"
                                 logoPath="../assets/icons/semi-accessible.svg"
                                 notes={this.state.entranceNotes}
                             />

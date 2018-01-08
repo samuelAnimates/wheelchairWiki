@@ -4,6 +4,9 @@ table{
 .display-block{
     display: block;
 }
+.display-inline-block{
+    display: inline-block;
+}
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
@@ -12,6 +15,12 @@ table{
 }
 .margin-auto{
     margin: auto;
+}
+.padding-left-p25em{
+    padding-left: 0.25em;
+}
+.padding-right-p5em{
+    padding-right: 0.25em;
 }
 .text-center{
     text-align: center;

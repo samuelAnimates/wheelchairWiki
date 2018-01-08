@@ -7,6 +7,9 @@
 .float-left{
     float: left;
 }
+.font-exo{
+    font-family: 'Exo', sans-serif;
+}
 .margin-auto{
     margin: auto;
 }
@@ -19,11 +22,14 @@
 .padding-top-1em{
     padding-top: 1em;
 }
+.padding-top-10em{
+    padding-top: 10em;
+}
 .responsive-one-third-container{
-    width: 100%
+    width: 100%;
 }
 .responsive-two-thirds-container{
-    width:  100%
+    width:  100%;
  }
 .text-center{
     text-align: center;
@@ -32,15 +38,7 @@
     width: 100%;
 }
 
-.navButton{
-    width: 33%;
-}
-
 @media (min-width: 900px){
-    .navButton{
-        width: 100%;
-    }
-
     .responsive-one-third-container{
         width: 33.3%
     }
