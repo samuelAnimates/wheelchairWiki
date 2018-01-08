@@ -26,10 +26,10 @@
     padding-top: 10em;
 }
 .responsive-one-third-container{
-    width: 100%
+    width: 100%;
 }
 .responsive-two-thirds-container{
-    width:  100%
+    width:  100%;
  }
 .text-center{
     text-align: center;
@@ -38,20 +38,12 @@
     width: 100%;
 }
 
-.navButton{
-    width: 33%;
-}
-
 @media (min-width: 900px){
-    .navButton{
-        width: 100%;
-    }
-
     .responsive-one-third-container{
         width: 33.3%
     }
     
     .responsive-two-thirds-container{
-       width:  66.7%
+       width:  66.6%
 	}
 }

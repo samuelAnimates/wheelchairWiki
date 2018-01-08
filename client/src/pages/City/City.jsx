@@ -62,8 +62,8 @@ class City extends Component {
                 </div>
               </GradientBackground>
             </header>
-            <main className="font-exo padding-top-10em text-center">
-              <div>Loading city data...</div>
+            <main className="font-exo padding-top-10em text-center" role="main">
+              <div role="status">Loading city data...</div>
             </main>
           </div>
         }
@@ -93,7 +93,7 @@ class City extends Component {
               <div className="float-left padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em responsive-one-third-container">
                 <TableOfContents/>
               </div>
-              <main className="float-left padding-top-1em responsive-two-thirds-container">
+              <main className="float-left padding-top-1em responsive-two-thirds-container" role="main">
                   <section className="padding-bottom-1em padding-top-1em">
                     <CityOverview
                       transportationInfo={this.state.city.transportation}
