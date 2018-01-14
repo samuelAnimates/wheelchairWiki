@@ -60,167 +60,169 @@ class MapContainer extends Component{
                     <h2  id="city-map">City Map</h2>
                     <a className="font-opensans" href="#resultsSection">Click here to skip past the map view and jump to the list view of this city's sites.</a>
                 </div>
-                <Map
-                    center={this.props.mapCenter}
-                    ref={m => { this.leafletMap = m; }}
-                    zoom={defaultZoomLevel}
-                >
-                    <LayersControl position="topright">
-                        <LayersControl.BaseLayer name="Street Map" checked="true">
-                        <TileLayer
-                            attribution={baseLayerAttr}
-                            url={baseLayerTiles}
-                        />
-                        </LayersControl.BaseLayer>
-                        <LayersControl.Overlay name="Sites" checked="true">
-                            <FeatureGroup>
-                                {
-                                    this.props.sites.map(result =>{
-                                        return (
-                                            <Marker
-                                                icon={SiteIcon}
-                                                position={[result.latitude, result.longitude]}
-                                            >
-                                                <Popup offset={[0,-10]}>
-                                                    <p>
-                                                        <a href={"#"+result._id}>{result.name}</a>
-                                                        <br/>
-                                                        Entrance: &nbsp;
-                                                            {result.entrance === 0 &&
-                                                                <span>Not Accessible</span>
-                                                            }
-                                                            {result.entrance === 0.5 &&
-                                                                <span>Mixed Accessibility</span>
-                                                            }
-                                                            {result.entrance === 1 &&
-                                                            <span>Accessible</span>
-                                                            }
-                                                        <br/>
-                                                        Bathroom: &nbsp;
-                                                            {result.bathroom === 0 &&
-                                                                <span>Not Accessible</span>
-                                                            }
-                                                            {result.bathroom === 0.5 &&
-                                                                <span>Mixed Accessibility</span>
-                                                            }
-                                                            {result.bathroom === 1 &&
-                                                            <span>Accessible</span>
-                                                            }
-                                                    </p>
-                                                </Popup>
-                                            </Marker>
-                                        )
-                                    })
-                                }
-                            </FeatureGroup>
-                        </LayersControl.Overlay>
-                        <LayersControl.Overlay name="Restaurants" checked="true">
-                            <FeatureGroup>
-                                {
-                                    this.props.restaurants.map(result =>{
-                                        return (
-                                            <Marker
-                                                icon={RestaurantIcon}
-                                                position={[result.latitude, result.longitude]}
-                                            >
-                                                <Popup offset={[0,-10]}>
-                                                    <p>
-                                                        <a href={"#"+result._id}>{result.name}</a>
-                                                        <br/>
-                                                        Entrance: &nbsp;
-                                                            {result.entrance === 0 &&
-                                                                <span>Not Accessible</span>
-                                                            }
-                                                            {result.entrance === 0.5 &&
-                                                                <span>Mixed Accessibility</span>
-                                                            }
-                                                            {result.entrance === 1 &&
-                                                            <span>Accessible</span>
-                                                            }
-                                                        <br/>
-                                                        Bathroom: &nbsp;
-                                                            {result.bathroom === 0 &&
-                                                                <span>Not Accessible</span>
-                                                            }
-                                                            {result.bathroom === 0.5 &&
-                                                                <span>Mixed Accessibility</span>
-                                                            }
-                                                            {result.bathroom === 1 &&
-                                                            <span>Accessible</span>
-                                                            }
-                                                    </p>
-                                                </Popup>
-                                            </Marker>
-                                        )
-                                    })
-                                }
-                            </FeatureGroup>
-                        </LayersControl.Overlay>
-                        <LayersControl.Overlay name="Public Accessible Bathrooms" checked="true">
-                            <FeatureGroup>
-                                {
-                                    this.props.bathrooms.map(result =>{
-                                        return (
-                                            <Marker
-                                                icon={BathroomIcon}
-                                                position={[result.latitude, result.longitude]}
-                                            >
-                                                <Popup offset={[0,-10]}>
-                                                    <a href={"#"+result._id}>{result.name}</a>
-                                                </Popup>
-                                            </Marker>
-                                        )
-                                    })
-                                }
-                            </FeatureGroup>
-                        </LayersControl.Overlay>
-                    </LayersControl>
-                </Map>
-            <div className="padding-bottom-1em text-center">
-                <div className="display-inline-block padding-top-p5em">
-                    <h4 className="text-center">Map Control Buttons</h4>
-                    <div className="display-inline-block padding-left-p5em padding-right-p5em">
-                        <div>
-                            <button className="font-exo" onClick={this.handleZoomInClick}>
-                                In (+)
-                            </button>
-                        </div>
-                        <div>
-                            <button className="font-exo" onClick={this.handleZoomOutClick}>
-                                Out (-)
-                            </button>
-                        </div>
-                        <div className="font-exo">
-                            Adjust Zoom
-                        </div>
+                    <div role="application">
+                        <Map
+                            center={this.props.mapCenter}
+                            ref={m => { this.leafletMap = m; }}
+                            zoom={defaultZoomLevel}
+                        >
+                            <LayersControl position="topright">
+                                <LayersControl.BaseLayer name="Street Map" checked="true">
+                                    <TileLayer
+                                        attribution={baseLayerAttr}
+                                        url={baseLayerTiles}
+                                    />
+                                </LayersControl.BaseLayer>
+                                <LayersControl.Overlay name="Sites" checked="true">
+                                    <FeatureGroup>
+                                        {
+                                            this.props.sites.map(result => {
+                                                return (
+                                                    <Marker
+                                                        icon={SiteIcon}
+                                                        position={[result.latitude, result.longitude]}
+                                                    >
+                                                        <Popup offset={[0, -10]}>
+                                                            <p>
+                                                                <a href={"#" + result._id}>{result.name}</a>
+                                                                <br />
+                                                                Entrance: &nbsp;
+                                                                            {result.entrance === 0 &&
+                                                                    <span>Not Accessible</span>
+                                                                }
+                                                                {result.entrance === 0.5 &&
+                                                                    <span>Mixed Accessibility</span>
+                                                                }
+                                                                {result.entrance === 1 &&
+                                                                    <span>Accessible</span>
+                                                                }
+                                                                <br />
+                                                                Bathroom: &nbsp;
+                                                                            {result.bathroom === 0 &&
+                                                                    <span>Not Accessible</span>
+                                                                }
+                                                                {result.bathroom === 0.5 &&
+                                                                    <span>Mixed Accessibility</span>
+                                                                }
+                                                                {result.bathroom === 1 &&
+                                                                    <span>Accessible</span>
+                                                                }
+                                                            </p>
+                                                        </Popup>
+                                                    </Marker>
+                                                )
+                                            })
+                                        }
+                                    </FeatureGroup>
+                                </LayersControl.Overlay>
+                                <LayersControl.Overlay name="Restaurants" checked="true">
+                                    <FeatureGroup>
+                                        {
+                                            this.props.restaurants.map(result => {
+                                                return (
+                                                    <Marker
+                                                        icon={RestaurantIcon}
+                                                        position={[result.latitude, result.longitude]}
+                                                    >
+                                                        <Popup offset={[0, -10]}>
+                                                            <p>
+                                                                <a href={"#" + result._id}>{result.name}</a>
+                                                                <br />
+                                                                Entrance: &nbsp;
+                                                                            {result.entrance === 0 &&
+                                                                    <span>Not Accessible</span>
+                                                                }
+                                                                {result.entrance === 0.5 &&
+                                                                    <span>Mixed Accessibility</span>
+                                                                }
+                                                                {result.entrance === 1 &&
+                                                                    <span>Accessible</span>
+                                                                }
+                                                                <br />
+                                                                Bathroom: &nbsp;
+                                                                            {result.bathroom === 0 &&
+                                                                    <span>Not Accessible</span>
+                                                                }
+                                                                {result.bathroom === 0.5 &&
+                                                                    <span>Mixed Accessibility</span>
+                                                                }
+                                                                {result.bathroom === 1 &&
+                                                                    <span>Accessible</span>
+                                                                }
+                                                            </p>
+                                                        </Popup>
+                                                    </Marker>
+                                                )
+                                            })
+                                        }
+                                    </FeatureGroup>
+                                </LayersControl.Overlay>
+                                <LayersControl.Overlay name="Public Accessible Bathrooms" checked="true">
+                                    <FeatureGroup>
+                                        {
+                                            this.props.bathrooms.map(result => {
+                                                return (
+                                                    <Marker
+                                                        icon={BathroomIcon}
+                                                        position={[result.latitude, result.longitude]}
+                                                    >
+                                                        <Popup offset={[0, -10]}>
+                                                            <a href={"#" + result._id}>{result.name}</a>
+                                                        </Popup>
+                                                    </Marker>
+                                                )
+                                            })
+                                        }
+                                    </FeatureGroup>
+                                </LayersControl.Overlay>
+                            </LayersControl>
+                        </Map>
+                        <div className="padding-bottom-1em text-center">
+                            <div className="display-inline-block padding-top-p5em">
+                                <h4 className="text-center">Map Control Buttons</h4>
+                                <div className="display-inline-block padding-left-p5em padding-right-p5em">
+                                    <div>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomInClick}>
+                                            In (+)
+                                            </button>
+                                    </div>
+                                    <div>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomOutClick}>
+                                            Out (-)
+                                            </button>
+                                    </div>
+                                    <div className="font-exo">
+                                        Adjust Zoom
+                                        </div>
+                                </div>
+                                <div className="display-inline-block padding-left-p5em padding-right-p5em">
+                                    <div>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleUpPanClick}>
+                                            North
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleLeftPanClick}>
+                                            West
+                                        </button>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outsetx font-exo width-4p5em" onClick={this.handleRightPanClick}>
+                                            East
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleDownPanClick}>
+                                            South
+                                        </button>
+                                    </div>
+                                    <div className="font-opensans">
+                                        Adjust Position
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="display-inline-block margin-auto padding-top-p5em">
+                                <Legend />
+                            </div>
                     </div>
-                    <div className="display-inline-block padding-left-p5em padding-right-p5em">
-                        <div>
-                            <button className="font-exo" onClick={this.handleUpPanClick}>
-                                North
-                            </button>
-                        </div>
-                        <div>
-                            <button className="font-exo" onClick={this.handleLeftPanClick}>
-                                West
-                            </button>
-                            <button className="font-exo" onClick={this.handleRightPanClick}>
-                                East
-                            </button>
-                        </div>
-                        <div>
-                            <button className="font-exo" onClick={this.handleDownPanClick}>
-                                South
-                            </button>
-                        </div>
-                        <div className="font-opensans">
-                            Adjust Position
-                        </div>
-                    </div>
-                </div>
-                <div className="display-inline-block margin-auto padding-top-p5em">
-                    <Legend/>
-                </div>
                 </div>
             </div>
         )

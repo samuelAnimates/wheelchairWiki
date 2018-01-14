@@ -1,3 +1,15 @@
+.background-white{
+    background-color: white;
+}
+.border-color-240-240-240{
+    border-color: rgb(240,240,240);
+}
+.border-radius-5px{
+    border-radius: 5px;
+}
+.border-style-outset{
+    border-style: outset;
+}
 .display-block{
     display: block;
 }
@@ -13,6 +25,9 @@
 .margin-auto{
     margin: auto;
 }
+.padding-bottom-p25em{
+    padding-bottom: 0.5em;
+}
 .padding-bottom-1em{
     padding-bottom: 1em;
 }
@@ -22,6 +37,9 @@
 .padding-right-p5em{
     padding-right: 0.5em;
 }
+.padding-top-p25em{
+    padding-top: 0.25em;
+}
 .padding-top-p5em{
     padding-top: 0.5em;
 }
@@ -30,4 +48,7 @@
 }
 .text-center{
     text-align: center;
+}
+.width-4p5em{
+    width: 4.5em;
 }

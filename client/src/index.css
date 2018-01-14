@@ -57,6 +57,11 @@ a{
 button{
     cursor: pointer; cursor: hand;  
 }
+button:hover{
+	background-color: rgb(231, 231, 231);
+	border-style: inset;
+	cursor: pointer; cursor: hand;  
+}
 h1{
 	font-family: 'Exo', sans-serif;
 	font-size: 3em;
