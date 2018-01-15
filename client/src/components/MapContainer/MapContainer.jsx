@@ -65,6 +65,8 @@ class MapContainer extends Component{
                             center={this.props.mapCenter}
                             ref={m => { this.leafletMap = m; }}
                             zoom={defaultZoomLevel}
+                            dragging={false}
+                            scrollWheelZoom={false}
                         >
                             <LayersControl position="topright">
                                 <LayersControl.BaseLayer name="Street Map" checked="true">
@@ -182,12 +184,12 @@ class MapContainer extends Component{
                                 <h4 className="text-center">Map Control Buttons</h4>
                                 <div className="display-inline-block padding-left-p5em padding-right-p5em">
                                     <div>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomInClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomInClick}>
                                             In (+)
                                             </button>
                                     </div>
                                     <div>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomOutClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo padding-bottom-p25em padding-top-p25em width-4p5em" onClick={this.handleZoomOutClick}>
                                             Out (-)
                                             </button>
                                     </div>
@@ -197,20 +199,20 @@ class MapContainer extends Component{
                                 </div>
                                 <div className="display-inline-block padding-left-p5em padding-right-p5em">
                                     <div>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleUpPanClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleUpPanClick}>
                                             North
                                         </button>
                                     </div>
                                     <div>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleLeftPanClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleLeftPanClick}>
                                             West
                                         </button>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outsetx font-exo width-4p5em" onClick={this.handleRightPanClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outsetx font-exo width-4p5em" onClick={this.handleRightPanClick}>
                                             East
                                         </button>
                                     </div>
                                     <div>
-                                        <button className="background-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleDownPanClick}>
+                                        <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo width-4p5em" onClick={this.handleDownPanClick}>
                                             South
                                         </button>
                                     </div>

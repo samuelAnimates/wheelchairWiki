@@ -1,5 +1,8 @@
-.background-white{
+.bg-white{
     background-color: white;
+}
+.bg-pink{
+    background-color: pink;
 }
 .border-color-240-240-240{
     border-color: rgb(240,240,240);
@@ -16,11 +19,17 @@
 .display-inline-block{
     display: inline-block;
 }
+.float-left{
+    float: left;
+}
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
 .font-opensans{
     font-family: 'Open Sans', sans-serif;
+}
+.height-60vh{
+    height: 60vh
 }
 .margin-auto{
     margin: auto;
@@ -51,4 +60,7 @@
 }
 .width-4p5em{
     width: 4.5em;
+}
+.width-65vw{
+    width: 65vw
 }
