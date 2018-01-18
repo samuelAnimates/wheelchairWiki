@@ -222,59 +222,61 @@ class ResultContainerBody extends Component {
 
                 <div className="text-center">
                     <EditButton onClick={this.toggleModal}/>
-                    <ModalLocationEdit show={this.state.isOpen}  onClose={this.toggleModal}
-                        handleInputChange={this.handleInputChange}
-                        handleFormSubmit={this.handleFormSubmit}
-                        site={{bathroom: this.state.bathroom,
-                            bathroomNotes: this.state.bathroomNotes,
-                            description: this.state.description,
-                            entrance: this.state.entrance,
-                            entranceNotes: this.state.entranceNotes,
-                            latitude: this.state.latitude,
-                            links: this.state.links,
-                            longitude: this.state.longitude,
-                            name: this.state.name,
-                            notes: this.state.notes,
-                            type: this.state.type}}
-                    >
-                        <div className="font-exo display-block margin-auto text-center">
-                            <form className="display-inlineblock">
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.name}
-                                    name={"name"}
-                                    label={"Name"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.description}
-                                    name={"description"}
-                                    label={"Description"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.notes}
-                                    name={"notes"}
-                                    label={"Notes"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.entranceNotes}
-                                    name={"entranceNotes"}
-                                    label={"Entrance Notes"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.bathroomNotes}
-                                    name={"bathroomNotes"}
-                                    label={"Bathroom Notes"}
-                                />
-                                <div>
-                                    <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
-                                </div>
-                            </form> 
-                        </div>
-                    </ModalLocationEdit>
+                    <div className="display-block margin-auto text-center">
+                        <ModalLocationEdit show={this.state.isOpen}  onClose={this.toggleModal}
+                            handleInputChange={this.handleInputChange}
+                            handleFormSubmit={this.handleFormSubmit}
+                            site={{bathroom: this.state.bathroom,
+                                bathroomNotes: this.state.bathroomNotes,
+                                description: this.state.description,
+                                entrance: this.state.entrance,
+                                entranceNotes: this.state.entranceNotes,
+                                latitude: this.state.latitude,
+                                links: this.state.links,
+                                longitude: this.state.longitude,
+                                name: this.state.name,
+                                notes: this.state.notes,
+                                type: this.state.type}}
+                        >
+                            <div className="font-exo">
+                                <form className="display-block margin-auto text-center">
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.name}
+                                        name={"name"}
+                                        label={"Name"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.description}
+                                        name={"description"}
+                                        label={"Description"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.notes}
+                                        name={"notes"}
+                                        label={"Notes"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.entranceNotes}
+                                        name={"entranceNotes"}
+                                        label={"Entrance Notes"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.bathroomNotes}
+                                        name={"bathroomNotes"}
+                                        label={"Bathroom Notes"}
+                                    />
+                                    <div className="clear-both">
+                                        <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
+                                    </div>
+                                </form> 
+                            </div>
+                        </ModalLocationEdit>
+                    </div>
                 </div>
 
             </div>

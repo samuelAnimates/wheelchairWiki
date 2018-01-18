@@ -54,6 +54,9 @@ table {
 a{
     cursor: pointer; cursor: hand;
 }
+a:hover{
+	cursor: pointer; cursor: hand;
+}
 button{
     cursor: pointer; cursor: hand;  
 }
