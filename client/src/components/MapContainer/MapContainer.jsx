@@ -72,9 +72,9 @@ class MapContainer extends Component{
                         <a href="#resultsSection">Click here to skip past the map view and jump to the list view of this city's sites.</a>
                     </p>
                 </div>
-                    <div className="bg-255-254-248 border-color-90-79-120 border-style-solid border-width-2px display-block margin-auto width-65vw" role="application">
-                        <div className="bg-90-79-120-p8 display-block margin-auto position-absolute height-60vh padding-top-3em text-center width-65vw z-index-2000" id="map-cover">
-                            <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo font-size-1p25em padding-bottom-p5em padding-top-p5em" onClick={this.handleEnableButtonClick}>
+                    <div className="bg-255-254-248 display-block margin-auto width-65vw" role="application">
+                        <div className="bg-90-79-120-p8 height-60vh padding-top-4em position-absolute width-65vw z-index-2000" id="map-cover">
+                            <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset display-block font-exo font-size-1p25em  margin-auto padding-bottom-p5em padding-top-p5em" onClick={this.handleEnableButtonClick}>
                                 Enable map controls
                             </button>
                         </div>
@@ -196,7 +196,7 @@ class MapContainer extends Component{
                                 </LayersControl.Overlay>
                             </LayersControl>
                         </Map>
-                        <div className="display-none padding-bottom-1em text-center" id="map-controls">
+                        <div className="border-color-90-79-120 border-style-solid border-width-2px display-none padding-bottom-1em text-center" id="map-controls">
                             <div className="display-inline-block padding-top-p5em">
                                 <h4 className="text-center">Map Control Buttons</h4>
                                 <div className="display-inline-block padding-left-p5em padding-right-p5em">
