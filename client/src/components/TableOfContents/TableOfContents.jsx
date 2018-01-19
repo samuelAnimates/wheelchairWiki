@@ -37,7 +37,7 @@ class TableOfContents extends Component {
                         </div>
                             <StickyDiv>
                                     <div className="margin-auto max-width-17em padding-left-p5em padding-right-p5em">
-                                        <nav className="bg-255-253-242 border-color border-style-solid border-width-2px display-block font-size-p85em padding-bottom-1em padding-left-1em padding-right-p5em padding-top-1em">
+                                        <nav className="bg-255-253-242 border-color border-style-solid border-width-2px display-block font-size-p85em padding-bottom-1em padding-left-1em padding-right-p5em padding-top-1em"  id="table-of-contents">
                                             <div className="padding-bottom-1em">
                                                 <a className="padding-bottom-p25em" href="#city-overview">1. City Overview</a>
                                                 <ul className="padding-left-1p5em padding-top-p25em">
@@ -70,7 +70,7 @@ class TableOfContents extends Component {
                         </div>
                         <div className="margin-auto max-width-17em padding-left-p5em padding-right-p5em">
                                     <div>
-                                        <nav className="bg-255-253-242 border-color border-style-solid border-width-2px display-block font-size-p85em padding-bottom-1em padding-left-1em padding-right-p5em padding-top-1em">
+                                        <nav className="bg-255-253-242 border-color border-style-solid border-width-2px display-block font-size-p85em padding-bottom-1em padding-left-1em padding-right-p5em padding-top-1em" id="table-of-contents">
                                             <div className="padding-bottom-1em">
                                                 <a className="padding-bottom-p25em" href="#city-overview">1. City Overview</a>
                                                 <ul className="padding-left-1p5em padding-top-p25em">

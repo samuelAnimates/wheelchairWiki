@@ -1,3 +1,9 @@
+.bg-white{
+    background: white;
+}
+.border-color-240-240-240{
+    border-color: rgb(240,240,240);
+}
 .clear-both{
     clear: both;
 }

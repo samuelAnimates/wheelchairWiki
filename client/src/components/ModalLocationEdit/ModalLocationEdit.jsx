@@ -15,12 +15,12 @@ class ModalLocationEdit extends Component {
     return (
       <div className="backdrop">
 
-        <div className="modal">
+        <div className="bg-255-254-248 modal">
           
           {this.props.children}
           
           <div className="footer">
-            <button onClick={this.props.onClose}>
+            <button className="bg-white border-color-240-240-240" onClick={this.props.onClose}>
               Close
             </button>
           </div>

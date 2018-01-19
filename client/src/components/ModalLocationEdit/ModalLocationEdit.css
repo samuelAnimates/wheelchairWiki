@@ -1,3 +1,7 @@
+.bg-255-254-248{
+    background-color: rgb(255, 254, 248);
+}
+
 .backdrop{
     position: fixed;
     top: 0;
