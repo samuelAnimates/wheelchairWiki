@@ -72,8 +72,8 @@ class MapContainer extends Component{
                         <a href="#resultsSection">Click here to skip past the map view and jump to the list view of this city's sites.</a>
                     </p>
                 </div>
-                    <div className="bg-255-254-248 border-color-90-79-120 border-style-solid border-width-2px display-block margin-auto responsive-65vw-container" role="application">
-                        <div className="bg-90-79-120-p8 float-left position-absolute height-60vh padding-top-3em text-center responsive-65vw-container z-index-2000" id="map-cover">
+                    <div className="bg-255-254-248 border-color-90-79-120 border-style-solid border-width-2px display-block margin-auto width-65vw" role="application">
+                        <div className="bg-90-79-120-p8 display-block margin-auto position-absolute height-60vh padding-top-3em text-center width-65vw z-index-2000" id="map-cover">
                             <button className="bg-white border-color-240-240-240 border-radius-5px border-style-outset font-exo font-size-1p25em padding-bottom-p5em padding-top-p5em" onClick={this.handleEnableButtonClick}>
                                 Enable map controls
                             </button>

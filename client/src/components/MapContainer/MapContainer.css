@@ -79,8 +79,8 @@
 .position-absolute{
     position: absolute;
 }
-.responsive-65vw-container{
-    width: 100%;
+.width-65vw{
+    width: 65vw;
 }
 .text-center{
     text-align: center;
@@ -90,10 +90,4 @@
 }
 .z-index-2000{
     z-index: 2000;
-}
-
-@media (min-width: 900px){
-    .responsive-65vw-containerr{
-       width:  66.7%
-	}
 }
