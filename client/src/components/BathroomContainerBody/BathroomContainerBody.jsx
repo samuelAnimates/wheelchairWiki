@@ -101,10 +101,20 @@ class BathroomContainerBody extends Component {
     };
 
     toggleModal = () => {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-        this.getPlace(this.state.type, this.state.id);
+        if (this.state.isOpen){
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+            document.body.style.overflow = "scroll";
+        }
+        else{
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+            document.body.style.overflow = "hidden";
+            this.getPlace(this.state.type, this.state.id);
+        }
+        
     }
     
     render(){
@@ -137,20 +147,22 @@ class BathroomContainerBody extends Component {
                             notes: this.state.notes,
                             type: this.state.type}}
                     >
-                        <div className="display-block font-exo margin-auto text-center">
-                            <form className="display-inlineblock">
+                        <div className="font-exo padding-top-1em text-center">
+                            <form  className="display-block margin-auto text-center">
                                 <InputText
                                     onChange={this.handleInputChange}
                                     value={this.state.name}
                                     name={"name"}
-                                    label={"Name"}
+                                    label={"Name:"}
                                 />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.notes}
-                                    name={"notes"}
-                                    label={"Notes"}
-                                />
+                                <div className="clear-both">
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.notes}
+                                        name={"notes"}
+                                        label={"Notes:"}
+                                    />
+                                </div>
                                 <div>
                                     <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
                                 </div>

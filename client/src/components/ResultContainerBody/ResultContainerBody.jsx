@@ -289,7 +289,7 @@ class ResultContainerBody extends Component {
                                         />
                                     </div>
                                     <div className="clear-both">
-                                        <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
+                                        <input className="bg-white border-color-240-240-240" type="submit" onClick={this.handleFormSubmit} value="Submit"/>
                                     </div>
                                 </form> 
                             </div>

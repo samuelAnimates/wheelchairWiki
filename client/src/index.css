@@ -61,7 +61,7 @@ button{
     cursor: pointer; cursor: hand;  
 }
 button:hover{
-	background-color: rgb(231, 231, 231);
+	background-color: rgb(214, 214, 214);
 	border-style: inset;
 	cursor: pointer; cursor: hand;  
 }

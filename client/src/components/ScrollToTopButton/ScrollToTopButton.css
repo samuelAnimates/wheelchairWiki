@@ -1,0 +1,32 @@
+.bg-255-255-255-p94{
+    background-color: rgba(255, 255, 255, 0.94);
+}
+.border-radius-50pc{
+    border-radius: 50%;
+}
+.height-4p25em{
+    height: 4.25em;
+}
+.position-fixed{
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+}
+.padding-bottom-p5em{
+    padding-bottom: 0.5em;
+}
+.padding-top-p5em{
+    padding-top: 0.5em;
+}
+.responsive-hidden{
+    display: block;
+}
+.width-4p25em{
+    width: 4.25em;
+}
+
+@media (min-width: 900px){
+    .responsive-hidden{
+        display: none;
+    }
+}

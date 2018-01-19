@@ -4,11 +4,13 @@ import CityOverview from "../../components/CityOverview";
 import GradientBackground from "../../components/GradientBackground";
 import HomeButton from "../../components/HomeButton";
 import LogInSignOutButton from "../../components/LogInSignOutButton";
-import ResultsSection from "../../components/ResultsSection";
 import MapContainer from "../../components/MapContainer";
+import ResultsSection from "../../components/ResultsSection";
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton'
 import TableOfContents from "../../components/TableOfContents";
 import API from "../../utils/API.js";
 import './City.css';
+;
 
 class City extends Component {
   
@@ -116,6 +118,7 @@ class City extends Component {
                       bathrooms={this.state.city.bathrooms}
                     />
                   </section>
+                  <ScrollToTopButton/>
               </main>
             </div>
           </div>
