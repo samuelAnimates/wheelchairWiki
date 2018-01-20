@@ -37,8 +37,8 @@ class Home extends Component {
           <GradientBackground>
             <div className="text-center width-100pc">
               <CityHeading
-                cityName="Wheelchair Travel Wiki"
-                countryName="Click a city on the map or in the list below to get started!"
+                cityName="Wheelchair Travel A11Y Wiki"
+                countryName="A collaborative wheelchair travel accessibility (A11Y) guide"
               />
               <div className="padding-top-1em">
                 <LogInSignOutButton
@@ -47,13 +47,21 @@ class Home extends Component {
               </div>
             </div>
           </GradientBackground>
+        <div>
+        </div>
         <div className="padding-top-1em">
+          <h2 className="text-center">Cities Map</h2>
+          <div className="font-opensans text-center">
+            <span>Click the button below to see a map of this city's reviewed sites, or </span>
+            <br/>
+            <a href="#cities-list">click here to skip past the map view and jump to the list view of this city's sites.</a>
+          </div>
           <HomepageMapContainer
             cities={this.state.cities}
           />
         </div>
         <div className="display-block margin-auto padding-bottom-1em padding-left-1em padding-right-1em padding-top-1em width-60pc">
-          <h2 className="font-exo font-size-2p5em text-center">Cities</h2>
+          <h2 className="text-center" id="cities-list">Cities List</h2>
             <div className="padding-bottom-1em padding-top-1em text-center">
             {this.state.cities.map(city=>{
               return (

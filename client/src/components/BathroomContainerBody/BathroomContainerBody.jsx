@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import API from "../../utils/API.js";
-import InputText from "../InputText"
+import Description from "../Description";
 import EditButton from "../EditButton";
-import Description from "../Description"
+import Fieldset from "../Fieldset";
+import InputText from "../InputText";
 import ModalLocationEdit from '../ModalLocationEdit';
 import ResultContainerHeader from "../ResultContainerHeader"
 
@@ -147,22 +148,26 @@ class BathroomContainerBody extends Component {
                             notes: this.state.notes,
                             type: this.state.type}}
                     >
-                        <div className="font-exo padding-top-1em text-center">
-                            <form  className="display-block margin-auto text-center">
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.name}
-                                    name={"name"}
-                                    label={"Name:"}
-                                />
-                                <div className="clear-both">
-                                    <InputText
-                                        onChange={this.handleInputChange}
-                                        value={this.state.notes}
-                                        name={"notes"}
-                                        label={"Notes:"}
-                                    />
-                                </div>
+                        <div className="font-exo padding-top-1em">
+                                <form className="display-block margin-auto text-center" id={"form-id-" + this.state.id}>
+                                    <Fieldset legend="Public Accessible Bathroom">
+                                        <InputText
+                                            form={"form-id-" + this.state.id}
+                                            label={"Name:"}
+                                            name={"name"}
+                                            onChange={this.handleInputChange}
+                                            value={this.state.name}
+                                        />
+                                        <div className="clear-both">
+                                            <InputText
+                                                form={"form-id-" + this.state.id}
+                                                label={"Notes:"}
+                                                name={"notes"}
+                                                onChange={this.handleInputChange}
+                                                value={this.state.notes}
+                                            />
+                                        </div>
+                                    </Fieldset>
                                 <div>
                                     <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
                                 </div>

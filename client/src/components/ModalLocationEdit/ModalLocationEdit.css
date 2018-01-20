@@ -17,7 +17,8 @@
     border-Radius: 5;
     top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
+    overflow-y: scroll;
     position: absolute;
-    width: 80%;
-    height: 80%;  
+    width: 90%;
+    height: 90%;  
 }

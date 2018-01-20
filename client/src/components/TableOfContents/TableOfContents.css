@@ -1,4 +1,3 @@
-
 .bg-255-253-242{
     background-color: rgb(255, 254, 248);
 }
@@ -43,6 +42,9 @@
 }
 .padding-bottom-1p5em{
     padding-bottom: 1.5em;
+}
+.padding-left-p25em{
+    padding-left: 0.25em;
 }
 .padding-left-p5em{
     padding-left: 0.5em;

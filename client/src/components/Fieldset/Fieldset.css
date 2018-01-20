@@ -1,0 +1,24 @@
+.bg-255-253-242{
+    background-color: rgb(255, 254, 248);
+}
+.border-color-90-79-120{
+    border-color: rgb(90, 79, 120);
+}
+.border-style-solid{
+    border-style: solid;
+}
+.border-width-2px{
+    border-width: 2px;
+}
+.padding-bottom-p25em{
+    padding-bottom: 0.25em;
+}
+.padding-left-p5em{
+    padding-left: 0.5em;
+} 
+.padding-right-p5em{
+    padding-right: 0.5em;
+}
+.padding-top-p5em{
+    padding-top: 0.5em;
+}

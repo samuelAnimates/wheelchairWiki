@@ -21,7 +21,7 @@ class ModalLocationEdit extends Component {
           
           <div className="footer">
             <button className="bg-white border-color-240-240-240" onClick={this.props.onClose}>
-              Close
+              Cancel
             </button>
           </div>
 

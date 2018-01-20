@@ -4,7 +4,7 @@ import LinksPanel from "../LinksPanel";
 
 const CityInfo = props => (
     <section className="padding-bottom-1em padding-left-1em padding-right-1em">
-        <h2 className="text-center" id="city-overview">City Overview</h2>
+        <h2 className="text-center" id="city-overview">City A11Y Overview</h2>
         <div>
             <h3 className="text-center" id="city-overview-terrain">Terrain</h3>
             <p className="font-opensans padding-bottom-1em padding-top-1em">{props.terrainInfo}</p>
