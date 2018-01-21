@@ -102,7 +102,7 @@ class ResultContainerBody extends Component {
           let editedPlaceData = {
             name: this.state.name,
             description: this.state.description,
-            notes: this.state.note,
+            notes: this.state.notes,
             entranceNotes: this.state.entranceNotes,
             bathroomNotes: this.state.bathroomNotes
           };
@@ -123,10 +123,12 @@ class ResultContainerBody extends Component {
     };
 
     handleInputChangeTextArea = event => {
-        const { name, val } = event.target;
+        console.log(event.target);
+        const { name, value } = event.target;
         this.setState({
-            [name]: val
+            [name]: value
         });
+        console.log(this.state.notes);
     };
 
     toggleModal = () => {
@@ -292,18 +294,9 @@ class ResultContainerBody extends Component {
                                     <div>
                                         <div className="float-left width-50pc">
                                             <Fieldset legend="Entrance">
-                                                    <div className="display-inlineblock">
-                                                        <div className="text-left">
-                                                            <div className="float-left font-monospace text-left width-9em" id={"entrance-accessibility-"+this.state.id}>Entrance A11Y:</div>
-                                                            <select aria-labelledby={"entrance-accessibility-"+this.state.id} className="float-left font-monospace width-9em" name="entrance" form={"form-id-" + this.state.id}>
-                                                                <option value={0}>Accessible</option>
-                                                                <option value={0.5}>Mixed Accessibility</option>
-                                                                <option value={1}>Not Accessible</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+
                                                     <InputText
-                                                        onChange={this.handleInputChange}
+                                                        onInput={this.handleInputChange}
                                                         value={this.state.entranceNotes}
                                                         name={"entranceNotes"}
                                                         label={"Entrance Notes:"}
@@ -313,16 +306,7 @@ class ResultContainerBody extends Component {
                                         </div>
                                         <div className="float-left width-50pc">
                                             <Fieldset legend="Bathroom">
-                                                    <div className="display-inlineblock">
-                                                        <div className="text-left">
-                                                            <div className="float-left font-monospace text-left width-9em" id={"bathroom-accessibility-"+this.state.id}>Bathroom A11Y:</div>
-                                                            <select aria-labelledby={"bathroom-accessibility-"+this.state.id} className="float-left font-monospace width-9em" name="bathroom" form={"form-id-" + this.state.id}>
-                                                                <option value={0}>Accessible</option>
-                                                                <option value={0.5}>Mixed Accessibility</option>
-                                                                <option value={1}>Not Accessible</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+
                                                     <div className="clear-both">
                                                         <InputText
                                                             onChange={this.handleInputChange}
