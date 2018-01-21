@@ -238,37 +238,43 @@ class ResultContainerBodyCondensed extends Component {
                             type: this.state.type}}
                     >
                         <div className="font-exo display-block margin-auto text-center">
-                            <form className="display-inlineblock">
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.name}
-                                    name={"name"}
-                                    label={"Name"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.description}
-                                    name={"description"}
-                                    label={"Description"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.notes}
-                                    name={"notes"}
-                                    label={"Notes"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.entranceNotes}
-                                    name={"entranceNotes"}
-                                    label={"Entrance Notes"}
-                                />
-                                <InputText
-                                    onChange={this.handleInputChange}
-                                    value={this.state.bathroomNotes}
-                                    name={"bathroomNotes"}
-                                    label={"Bathroom Notes"}
-                                />
+                            <form className="display-inlineblock"  id={"form-id-" + this.state.id}>
+                                <fieldset>
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.name}
+                                        name={"name"}
+                                        label={"Name"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.description}
+                                        name={"description"}
+                                        label={"Description"}
+                                    />
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.notes}
+                                        name={"notes"}
+                                        label={"Notes"}
+                                    />
+                                </fieldset>
+                                <fieldset>
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.entranceNotes}
+                                        name={"entranceNotes"}
+                                        label={"Entrance Notes"}
+                                    />
+                                </fieldset>
+                                <fieldset>
+                                    <InputText
+                                        onChange={this.handleInputChange}
+                                        value={this.state.bathroomNotes}
+                                        name={"bathroomNotes"}
+                                        label={"Bathroom Notes"}
+                                    />
+                                </fieldset>
                                 <div>
                                     <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
                                 </div>

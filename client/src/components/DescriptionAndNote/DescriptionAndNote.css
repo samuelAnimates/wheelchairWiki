@@ -10,6 +10,12 @@
 .font-opensans{
     font-family: 'Open Sans', sans-serif;
 }
+.font-size-p75em{
+    font-size: 0.75em;
+}
+.font-weight-400{
+    font-weight: 400;
+}
 .font-weight-600{
     font-weight: 600;
 }
@@ -21,6 +27,9 @@
 }
 .padding-right-p5em{
     padding-right: 0.5em;
+}
+.padding-top-p5em{
+    padding-top: 0.5em;
 }
 .padding-top-1em{
     padding-top: 1em;

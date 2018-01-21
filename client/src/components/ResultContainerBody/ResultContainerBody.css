@@ -19,19 +19,36 @@
 .font-exo{
     font-family: 'Exo', sans-serif;
 }
+.font-monospace{
+    font-family: monospace;
+}
 .font-weight-400{
     font-weight: 400;
 }
 .margin-auto{
     margin: auto;
 }
+.padding-left-p5em{
+    padding-left: 0.5em;
+}
+.padding-right-p5em{
+    padding-right: 0.5em;
+}
 .text-center{
     text-align: center;
+}
+.text-left{
+    text-align: left;
 }
 .width-50pc{
     width: 50%;
 }
-
+.width-75pc{
+    width: 75%;
+}
+.width-9em{
+    width: 9em;
+ }
 .position-static{
     position: static;
 }

@@ -4,6 +4,9 @@
 .display-inlineblock{
   display: inline-block;
 }
+.font-monospace{
+  font-family: monospace;
+}
 .margin-auto{
   margin: auto;
 }
@@ -19,6 +22,6 @@
 .text-right{
   text-align: right;
 }
-.width-8em{
-  width: 8em;
+.width-9em{
+  width: 9em;
 }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import API from "../../utils/API.js";
+import DescriptionAndNote from "../DescriptionAndNote";
+import EditButton from "../EditButton";
+import Fieldset from "../Fieldset";
 import IconAndNote from "../IconAndNote"
 import InputText from "../InputText"
-import EditButton from "../EditButton";
-import DescriptionAndNote from "../DescriptionAndNote";
+import InputTextArea from "../InputTextArea"
 import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
 import ResultContainerHeader from "../ResultContainerHeader"
@@ -100,7 +102,7 @@ class ResultContainerBody extends Component {
           let editedPlaceData = {
             name: this.state.name,
             description: this.state.description,
-            notes: this.state.note,
+            notes: this.state.notes,
             entranceNotes: this.state.entranceNotes,
             bathroomNotes: this.state.bathroomNotes
           };
@@ -108,7 +110,7 @@ class ResultContainerBody extends Component {
           this.toggleModal();
         }
         else{
-            alert("Oops! Looks like there's something wrong with the info. Please make sure the site you're editing still has a name and a description, and try again!");
+            alert("Oops! Looks like there's something wrong with the info you entered. Please check your input and try again!");
             this.toggleModal();
         }
     };
@@ -118,6 +120,15 @@ class ResultContainerBody extends Component {
         this.setState({
             [name]: value
         });
+    };
+
+    handleInputChangeTextArea = event => {
+        console.log(event.target);
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state.notes);
     };
 
     toggleModal = () => {
@@ -223,7 +234,7 @@ class ResultContainerBody extends Component {
                     />
                 </div>
 
-                <div>
+                <div className="padding-left-p5em padding-right-p5em">
                     <h5 className="text-center">Links</h5>
                     <LinksPanel
                         links= {this.state.links}
@@ -249,44 +260,64 @@ class ResultContainerBody extends Component {
                                 type: this.state.type}}
                         >
                             <div className="font-exo padding-top-1em">
-                                <form className="display-block margin-auto text-center">
-                                    <InputText
-                                        onChange={this.handleInputChange}
-                                        value={this.state.name}
-                                        name={"name"}
-                                        label={"Name:"}
-                                    />
-                                    <div className="clear-both">
-                                        <InputText
-                                            onChange={this.handleInputChange}
-                                            value={this.state.description}
-                                            name={"description"}
-                                            label={"Description:"}
-                                        />
+                                <form className="display-block margin-auto text-center" id={"form-id-" + this.state.id}>
+                                    <div className="width-75pc">
+                                        <Fieldset legend="Overview">
+                                            <InputText
+                                                onChange={this.handleInputChange}
+                                                value={this.state.name}
+                                                name={"name"}
+                                                label={"Name:"}
+                                                form={"form-id-" + this.state.id}
+                                            />
+                                            <div className="clear-both">
+                                                <InputText
+                                                    onChange={this.handleInputChange}
+                                                    value={this.state.description}
+                                                    name={"description"}
+                                                    label={"Description:"}
+                                                    form={"form-id-" + this.state.id}
+                                                />
+                                            </div>
+                                            <div className="clear-both">
+                                                <InputTextArea
+                                                    onInput={this.handleInputChangeTextArea}
+                                                    containerId={this.state.id}
+                                                    value={this.state.notes}
+                                                    name={"notes"}
+                                                    label={"Overall Notes:"}
+                                                    form={"form-id-" + this.state.id}
+                                                />
+                                            </div>
+                                        </Fieldset>
                                     </div>
-                                    <div className="clear-both">
-                                        <InputText
-                                            onChange={this.handleInputChange}
-                                            value={this.state.notes}
-                                            name={"notes"}
-                                            label={"Notes:"}
-                                        />
-                                    </div>
-                                    <div className="clear-both">
-                                        <InputText
-                                            onChange={this.handleInputChange}
-                                            value={this.state.entranceNotes}
-                                            name={"entranceNotes"}
-                                            label={"Entrance:"}
-                                        />
-                                    </div>
-                                    <div className="clear-both">
-                                        <InputText
-                                            onChange={this.handleInputChange}
-                                            value={this.state.bathroomNotes}
-                                            name={"bathroomNotes"}
-                                            label={"Bathroom:"}
-                                        />
+                                    <div>
+                                        <div className="float-left width-50pc">
+                                            <Fieldset legend="Entrance">
+
+                                                    <InputText
+                                                        onInput={this.handleInputChange}
+                                                        value={this.state.entranceNotes}
+                                                        name={"entranceNotes"}
+                                                        label={"Entrance Notes:"}
+                                                        form={"form-id-" + this.state.id}
+                                                    />
+                                            </Fieldset>
+                                        </div>
+                                        <div className="float-left width-50pc">
+                                            <Fieldset legend="Bathroom">
+
+                                                    <div className="clear-both">
+                                                        <InputText
+                                                            onChange={this.handleInputChange}
+                                                            value={this.state.bathroomNotes}
+                                                            name={"bathroomNotes"}
+                                                            label={"Bathroom Notes:"}
+                                                            form={"form-id-" + this.state.id}
+                                                        />
+                                                    </div>
+                                            </Fieldset>
+                                        </div>
                                     </div>
                                     <div className="clear-both">
                                         <input className="bg-white border-color-240-240-240" type="submit" onClick={this.handleFormSubmit} value="Submit"/>

@@ -1,0 +1,27 @@
+.clear-both{
+  clear: both;
+}
+.display-inlineblock{
+  display: inline-block;
+}
+.font-monospace{
+  font-family: monospace;
+}
+.margin-auto{
+  margin: auto;
+}
+.padding-right-p25em{
+  padding-right: .25em;
+}
+.float-left{
+  float: left;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.width-9em{
+  width: 9em;
+}

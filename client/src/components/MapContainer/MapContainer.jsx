@@ -65,11 +65,10 @@ class MapContainer extends Component{
         return (
             <div className="display-block margin-auto">
                 <div className="padding-bottom-1em padding-top-1em text-center">
-                    <h2  id="city-map">City Map</h2>
-                    <p className="font-opensans" >
-                        Click the button below to see a map of this city's reviewed sites.
-                        <br/>
-                        <a href="#resultsSection">Click here to skip past the map view and jump to the list view of this city's sites.</a>
+                    <h2 id="city-map">City A11Y Map</h2>
+                    <p className="font-opensans">
+                        <span>Click the button below to see a map of this city's reviewed sites, or </span>
+                        <a href="#resultsSection">click here to skip past the map view and jump to the list view of this city's sites.</a>
                     </p>
                 </div>
                     <div className="bg-255-254-248 display-block margin-auto width-65vw" role="application">
