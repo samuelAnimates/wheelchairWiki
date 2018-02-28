@@ -67,6 +67,7 @@ class ResultContainerBody extends Component {
                 notes: res.data.notes,
                 type: res.data.type
             });
+            console.log("STATE SET");
         })
         .catch(err => console.log(err));
     }
@@ -104,7 +105,10 @@ class ResultContainerBody extends Component {
             description: this.state.description,
             notes: this.state.notes,
             entranceNotes: this.state.entranceNotes,
-            bathroomNotes: this.state.bathroomNotes
+            bathroomNotes: this.state.bathroomNotes,
+            entrance: this.state.entrance,
+            bathroom: this.state.bathroom
+
           };
           this.editPlace(this.state.type, this.state.id, editedPlaceData);
           this.toggleModal();
@@ -294,19 +298,37 @@ class ResultContainerBody extends Component {
                                     <div>
                                         <div className="float-left width-50pc">
                                             <Fieldset legend="Entrance">
-
-                                                    <InputText
-                                                        onInput={this.handleInputChange}
-                                                        value={this.state.entranceNotes}
-                                                        name={"entranceNotes"}
-                                                        label={"Entrance Notes:"}
-                                                        form={"form-id-" + this.state.id}
-                                                    />
+                                                <div className="display-inlineblock">
+                                                    <div className="text-left">
+                                                        <div className="float-left font-monospace text-left width-9em" id={"entrance-accessibility-"+this.state.id}>Entrance A11Y:</div>
+                                                        <select onChange={this.handleInputChange} defaultValue={this.state.entrance} aria-labelledby={"entrance-accessibility-"+this.state.id} className="float-left font-monospace width-9em" name="entrance" form={"form-id-" + this.state.id}>
+                                                            <option value={1}>Accessible</option>
+                                                            <option value={0.5}>Mixed Accessibility</option>
+                                                            <option value={0}>Not Accessible</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <InputText
+                                                    onInput={this.handleInputChange}
+                                                    value={this.state.entranceNotes}
+                                                    name={"entranceNotes"}
+                                                    label={"Entrance Notes:"}
+                                                    form={"form-id-" + this.state.id}
+                                                />
                                             </Fieldset>
                                         </div>
                                         <div className="float-left width-50pc">
                                             <Fieldset legend="Bathroom">
-
+                                                    <div className="display-inlineblock">
+                                                        <div className="text-left">
+                                                            <div className="float-left font-monospace text-left width-9em" id={"bathroom-accessibility-"+this.state.id}>Bathroom A11Y:</div>
+                                                            <select onChange={this.handleInputChange} defaultValue={this.state.bathroom} aria-labelledby={"bathroom-accessibility-"+this.state.id} className="float-left font-monospace width-9em" name="bathroom" form={"form-id-" + this.state.id}>
+                                                                <option value={1}>Accessible</option>
+                                                                <option value={0.5}>Mixed Accessibility</option>
+                                                                <option value={0}>Not Accessible</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                     <div className="clear-both">
                                                         <InputText
                                                             onChange={this.handleInputChange}
