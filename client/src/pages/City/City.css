@@ -1,3 +1,9 @@
+.bg-white{
+    background-color: white;
+}
+.border-none{
+    border: none;
+}
 .display-block{
     display: block;
 }

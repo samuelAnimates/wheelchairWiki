@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import CityHeading from "../../components/CityHeading";
-import GradientBackground from "../../components/GradientBackground";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import HomepageMapContainer from "../../components/HomepageMapContainer";
 import LogInSignOutButton from "../../components/LogInSignOutButton";
 import API from "../../utils/API.js";
@@ -34,9 +35,7 @@ class Home extends Component {
   render() {
     return (
       <div className="width-100pc">
-          <header>
-            <GradientBackground>
-              <div className="text-center width-100pc">
+          <Header>
                 <CityHeading
                   cityName="Wheelchair Travel A11Y Wiki"
                   countryName="A collaborative wheelchair travel accessibility (A11Y) guide"
@@ -46,18 +45,21 @@ class Home extends Component {
                     logOut = {this.logOut}
                   />
                 </div>
-              </div>
-            </GradientBackground>
-          </header>
+          </Header>
         <main className="padding-bottom-2em padding-left-2em padding-right-2em">
           <div>
+            <h2 className="text-center">Intro</h2>
+            <div className="display-block font-opensans margin-auto text-center width-60pc">
+              <p>Wheelchair A11Y Wiki is the demo of a wheelchair travel accessibility wiki, meant to serve as a city-by-city guide to travel for wheelchair users.</p>
+            </div>
           </div>
           <div className="padding-top-1em">
             <h2 className="text-center">Cities Map</h2>
             <div className="display-block font-opensans margin-auto text-center width-60pc">
-              <span>Click the button below to see a map of this city's reviewed sites, or </span>
-              <br/>
-              <a href="#cities-list">click here to skip past the map view and jump to the list view of this city's sites.</a>
+              <p>
+                <span>Click the button below to see a map of this city's reviewed sites, or </span>
+                <a href="#cities-list">click here to skip past the map view and jump to the list view of this city's sites.</a>
+              </p>
             </div>
             <HomepageMapContainer
               cities={this.state.cities}
@@ -79,6 +81,7 @@ class Home extends Component {
               </div>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }

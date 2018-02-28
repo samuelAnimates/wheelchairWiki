@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import API from "../../utils/API.js";
-import IconAndNoteCondensed from "../IconAndNoteCondensed"
-import InputText from "../InputText"
-import EditButton from "../EditButton";
 import DescriptionAndNoteCondensed from "../DescriptionAndNoteCondensed";
+import EditButton from "../EditButton";
+import Fieldset from "../Fieldset";
+import IconAndNoteCondensed from "../IconAndNoteCondensed";
+import InputText from "../InputText";
+import InputTextArea from "../InputTextArea";
 import LinksPanel from "../LinksPanel";
 import ModalLocationEdit from '../ModalLocationEdit';
-import ResultContainerHeaderCondensed from "../ResultContainerHeaderCondensed"
+import ResultContainerHeaderCondensed from "../ResultContainerHeaderCondensed";
 
 class ResultContainerBodyCondensed extends Component {
     state={
@@ -121,10 +123,20 @@ class ResultContainerBodyCondensed extends Component {
     };
 
     toggleModal = () => {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-        this.getPlace(this.state.type, this.state.id);
+        if (this.state.isOpen){
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+            document.body.style.overflow = "scroll";
+        }
+        else{
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+            document.body.style.overflow = "hidden";
+            this.getPlace(this.state.type, this.state.id);
+        }
+        
     }
 
     render (){
@@ -238,46 +250,78 @@ class ResultContainerBodyCondensed extends Component {
                             type: this.state.type}}
                     >
                         <div className="font-exo display-block margin-auto text-center">
-                            <form className="display-inlineblock"  id={"form-id-" + this.state.id}>
-                                <fieldset>
-                                    <InputText
-                                        onChange={this.handleInputChange}
-                                        value={this.state.name}
-                                        name={"name"}
-                                        label={"Name"}
-                                    />
+                            <form className="display-block margin-auto"  id={"form-id-" + this.state.id}>
+                            <Fieldset legend="Overview">
+                                <InputText
+                                    onChange={this.handleInputChange}
+                                    value={this.state.name}
+                                    name={"name"}
+                                    label={"Name:"}
+                                    form={"form-id-" + this.state.id}
+                                />
+                                <div className="clear-both">
                                     <InputText
                                         onChange={this.handleInputChange}
                                         value={this.state.description}
                                         name={"description"}
-                                        label={"Description"}
+                                        label={"Description:"}
+                                        form={"form-id-" + this.state.id}
                                     />
-                                    <InputText
-                                        onChange={this.handleInputChange}
+                                </div>
+                                <div className="clear-both">
+                                    <InputTextArea
+                                        onInput={this.handleInputChangeTextArea}
+                                        containerId={this.state.id}
                                         value={this.state.notes}
                                         name={"notes"}
-                                        label={"Notes"}
+                                        label={"Overall Notes:"}
+                                        form={"form-id-" + this.state.id}
                                     />
-                                </fieldset>
-                                <fieldset>
+                                </div>
+                            </Fieldset>
+                            <Fieldset legend="Entrance">
+                                    <div className="display-inlineblock">
+                                        <div className="text-center">
+                                            <div className="font-monospace text-center width-9em" id={"entrance-accessibility-"+this.state.id}>Entrance A11Y:</div>
+                                            <select onInput={this.handleInputChange} defaultValue={this.state.entrance} aria-labelledby={"entrance-accessibility-"+this.state.id} className="font-monospace width-9em" name="entrance" form={"form-id-" + this.state.id}>
+                                                <option value={1}>Accessible</option>
+                                                <option value={0.5}>Mixed Accessibility</option>
+                                                <option value={0}>Not Accessible</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <InputText
-                                        onChange={this.handleInputChange}
+                                        onInput={this.handleInputChange}
                                         value={this.state.entranceNotes}
                                         name={"entranceNotes"}
-                                        label={"Entrance Notes"}
+                                        label={"Entrance Notes:"}
+                                        form={"form-id-" + this.state.id}
                                     />
-                                </fieldset>
-                                <fieldset>
-                                    <InputText
-                                        onChange={this.handleInputChange}
-                                        value={this.state.bathroomNotes}
-                                        name={"bathroomNotes"}
-                                        label={"Bathroom Notes"}
-                                    />
-                                </fieldset>
-                                <div>
-                                    <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
-                                </div>
+                            </Fieldset>
+                            <Fieldset legend="Bathroom">
+                                    <div className="display-inlineblock">
+                                        <div className="text-center">
+                                            <div className="float-left font-monospace text-center width-9em" id={"bathroom-accessibility-"+this.state.id}>Bathroom A11Y:</div>
+                                            <select onChange={this.handleInputChange} defaultValue={this.state.bathroom} aria-labelledby={"bathroom-accessibility-"+this.state.id} className="font-monospace width-9em" name="bathroom" form={"form-id-" + this.state.id}>
+                                                <option value={1}>Accessible</option>
+                                                <option value={0.5}>Mixed Accessibility</option>
+                                                <option value={0}>Not Accessible</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="clear-both">
+                                        <InputText
+                                            onChange={this.handleInputChange}
+                                            value={this.state.bathroomNotes}
+                                            name={"bathroomNotes"}
+                                            label={"Bathroom Notes:"}
+                                            form={"form-id-" + this.state.id}
+                                        />
+                                    </div>
+                            </Fieldset>
+                            <div>
+                                <input  type="submit" onClick={this.handleFormSubmit} value="Submit"/>
+                            </div>
                             </form> 
                         </div>
                     </ModalLocationEdit>
